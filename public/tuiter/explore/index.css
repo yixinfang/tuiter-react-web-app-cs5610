@@ -49,9 +49,9 @@
     border-bottom-style: double;
 }
 .wd-head-padding {
-    padding: 10px;
-    /*padding-bottom: 10px;*/
-    /*padding-top: 10px;*/
+    /*padding: 10px;*/
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .wd-col-one-sixth {
     width: 16%;
@@ -67,8 +67,14 @@
 .wd-link-font {
     font-size: 15px;
 }
+.wd-left-letter-border {
+    border-right: gray solid 1px;
+}
 .wd-link-border {
     border-bottom: rgb(29,161,242) solid medium;
+}
+.wd-link-border-other {
+    border-bottom: black solid medium;
 }
 .wd-link {
     font-size: 15px;
@@ -85,4 +91,7 @@
     top: 10px;
     left: 50px;
     /*transform: translate(0, -50%);*/
+}
+.wd-text-center {
+    text-align: center;
 }
