@@ -3,247 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
-<body>
     <head>
         <link href="index.css"
               rel="stylesheet"/>
+        <link href="../style.css"
+              rel="stylesheet"/>
     </head>
-    <div class="wd-row">
-        <div class="wd-left-letter wd-float-left wd-explore-bg-color-black wd-fg-color-white wd-text-center">
-            A
+</head>
+<body>
+
+    <div class="wd-bg-color-black">
+        <div class="wd-content">
+<!--            content A-->
+            <div class="wd-clear">
+                <div class="wd-float-left wd-margin-left-16 wd-bg-color-darkgray wd-rounded-corners">
+                    <img class="wd-float-left wd-icon wd-margin-left-12" src="data:image/png;base64,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"/>
+                    <input class="wd-explore-search-bg-color wd-fg-color-white wd-rounded-corners wd-input-border-color wd-input-border-override" placeholder="Search Tuiter"/>
+                </div>
+                <a href="../explore-settings.html"><img class="wd-gear-icon"
+                     src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX33741366.jpg"/></a>
+                <div class="wd-clear"></div>
+            </div>
+
+<!--            content B-->
+            <div class="wd-clear">
+                <div class="wd-col-one-sixth ">
+                    <div class="wd-padding-left-16 wd-padding-top-16 wd-padding-right-16">
+                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-link-highlighted-color wd-link-border wd-bold-font">
+                            For you</span>
+                    </div>
+                </div>
+
+                <div class="wd-col-one-sixth ">
+                    <div class="wd-padding-left-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">
+                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">
+                            Trending</span>
+                    </div>
+                </div>
+                <div class="wd-col-one-sixth ">
+                    <div class="wd-padding-left-16  wd-padding-top-16 wd-padding-right-16 wd-text-center">
+                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">
+                            COVID-19</span>
+                    </div>
+                </div>
+                <div class="wd-col-one-sixth ">
+                    <div class="wd-padding-left-16  wd-padding-top-16 wd-padding-right-16 wd-text-center">
+                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">
+                            NEWS</span>
+                    </div>
+                </div>
+                <div class="wd-col-one-sixth ">
+                    <div class="wd-padding-left-16 wd-padding-bottom-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">
+                        <span class="wd-font-size-15 wd-font wd-margin-bottom-0 wd-bold-font">
+                            Sports</span>
+                    </div>
+                </div>
+
+                <div class="wd-col-one-sixth ">
+                    <div class="wd-padding-left-16 wd-padding-bottom-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">
+                        <span class="wd-link-border-other wd-link-color wd-font-size-15 wd-font wd-bold-font">
+                            Entertainment</span>
+                    </div>
+                </div>
+                <div class="wd-clear"></div>
+            </div>
         </div>
-        <div class="wd-explore-content wd-float-left wd-explore-bg-color-black wd-fg-color-white">
-<!--            hello-->
-            <input class="wd-explore-search-bg-color wd-fg-color-white wd-rounded-corners" placeholder="Search Tuiter"/>
+
+        <div class="wd-content wd-padding-bottom-16">
+        </div>
+        <!--        content C-->
+        <div class="wd-content">
+            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-padding-right-16 wd-font-size-13 wd-link-color wd-font">
+
+<!--                <h3 class="wd-margin-block-0">-->
+<!--                    Trending in Science</br>-->
+<!--                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>-->
+<!--                    55.6K Tweets-->
+<!--                </h3>-->
+                <h3 class="wd-margin-block-0">Trending in Science</h3>
+                <h3 class="wd-margin-block-0 wd-fg-color-white wd-bold-font">Starship</h3>
+                <h3 class="wd-margin-block-0">55.6K Tweets</h3>
+<!--                <p>-->
+<!--                    Trending in Science</br>-->
+<!--                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>-->
+<!--                    55.6K Tweets-->
+<!--                </p>-->
+<!--                <p>-->
+<!--                    Trending in Science</br>-->
+<!--                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>-->
+<!--                    55.6K Tweets-->
+<!--                </p>-->
+
+<!--                Trending in Science</br>-->
+<!--                <span class="wd-fg-color-white wd-bold-font">Starship</span></br>-->
+<!--                55.6K Tweets-->
+            </div>
+
+
+            <div class="wd-clear"></div>
+        </div>
+
+        <!--        content C-->
+        <div class="wd-content">
+            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-padding-right-16 wd-font-size-13 wd-link-color wd-font">
+                <h3 class="wd-margin-block-0">Trending in United States</h3>
+                <h3 class="wd-margin-block-0 wd-fg-color-white wd-bold-font">Wonder Bread</h3>
+                <h3 class="wd-margin-block-0">1,259 Tweets</h3>
+            </div>
+            <div class="wd-clear"></div>
+        </div>
+
+        <!--        content D-->
+        <div class="wd-content">
+            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
+                <h3 class="wd-margin-block-0">New York Times <span class="wd-link-color">Yesterday</span></h3>
+                <h3 class="wd-margin-block-0">Patrick Mahomes Leads Kansas City Back to the Super Bowl</h3>
+<!--                <p>Patrick Mahomes Leads Kansas City Back to the Super Bowl</p>-->
+
+            </div>
+            <div class="wd-bg-color-black">
+                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-5 wd-margin-right-16"
+                     src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>
+            </div>
+            <div class="wd-clear"></div>
+        </div>
+
+        <div class="wd-content">
+            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
+                <h3 class="wd-margin-block-0">Bloomberg Opinion <span class="wd-link-color">Yesterday</span></h3>
+                <h3 class="wd-margin-block-0">Think about getting a booster? Read this first.</h3>
+
+            </div>
+            <div class="wd-bg-color-black">
+                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-10 wd-margin-right-16"
+                     src="https://cdn.theatlantic.com/thumbor/yK90YxMSAx48kd35wX6cKdTeySQ=/0x0:8334x4688/1600x900/media/img/mt/2021/09/0921_Rachel_Katie_BoosterTiming_square_01/original.png"/>
+            </div>
+            <div class="wd-clear"></div>
+        </div>
+
+
+        <div class="wd-content">
+            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
+                <h3 class="wd-margin-block-0"> <span class="wd-link-color">COVID-19</span></h3>
+                <h3 class="wd-margin-block-0">COVID-19: News and updates for Massachusetts</h3>
+
+            </div>
+            <div class="wd-bg-color-black">
+                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-15 wd-margin-right-16"
+                     src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>
+            </div>
+            <div class="wd-clear"></div>
+        </div>
+        <!--        content D-->
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-float-left wd-bg-color-black">-->
+<!--                COVID-19-->
+<!--                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
+<!--            </div>-->
+<!--            <div class="wd-bg-color-black"></div>-->
+<!--                <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
+<!--                     src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
+<!--&lt;!&ndash;                     src="https://www.mass.gov/libraries/mayflower-artifacts/assets/images/logo/stateseal-color.png"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                     src="https://www.southwickma.org/sites/g/files/vyhlif1241/f/resize/imce/safe_image1-290x151.png"/>&ndash;&gt;-->
+<!--            <div class="wd-clear"></div>-->
+<!--        </div>-->
+<!--        ####-->
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-float-left wd-bg-color-black">-->
+<!--                COVID-19-->
+<!--                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
+<!--            </div>-->
+<!--            <div class="wd-float-right wd-margin-right-16 wd-bg-color-black wd-pos-relative">-->
+<!--&lt;!&ndash;                <div class="wd-pos-vertically-center ">&ndash;&gt;-->
+<!--                <div class=" wd-vertical-align">-->
+<!--                    <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
+<!--                         src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--            <div class="wd-clear"></div>-->
+<!--        </div>-->
+<!-- #####-->
+<!--        <div class="wd-clear">-->
+<!--            <div class="wd-float-left wd-col-three-forth">-->
+<!--                COVID-19-->
+<!--                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
+<!--            </div>-->
+<!--            <div class="wd-float-left wd-col-one-forth">-->
+<!--                <div class="wd-container">-->
+<!--                    <div class="vertical-center">-->
+<!--                        <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
+<!--                             src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
+
+<!--                    </div>-->
+
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="wd-clear"></div>-->
+
+<!--        </div>-->
+
+    </div>
+
+    <div class="wd-bg-color-black">
+        <div class="wd-content">
+            <div class="wd-margin-right-16 wd-margin-left-16">
+                <div class="wd-float-left wd-col-three-forth">
+                    <div class="wd-float-left wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
+                        <h3 class="wd-margin-block-0"> <span class="wd-link-color">IT technology</span></h3>
+                        <h3 class="wd-margin-block-0">Web Development: Welcome to learn new full stack technology</h3>
+
+                    </div>
+<!--                    <div class="wd-padding-top-16">-->
+<!--                        COVID-19-->
+<!--                        <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
+<!--                    </div>-->
+
+                </div>
+
+                <div class="wd-float-left wd-col-one-forth">
+
+                    <div class="wd-container">
+                        <div class="vertical-center">
+                            <img class="wd-float-right wd-float-right-1 wd-bg-color-black"
+                                 src="../banner.webp"/>
+<!--                                 src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
+
+                        </div>
+                    </div>
+                </div>
+                <div class="wd-clear"></div>
+            </div>
+
 
         </div>
     </div>
-<!--    <div class="wd-row">-->
-<!--        <div class="wd-left-letter wd-explore-bg-color-black wd-fg-color-white">-->
-<!--            B-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--           <div class="pos-relative-center">-->
-<!--               For you-->
-<!--           </div>-->
 
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            Trending-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            COVID-19-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            News-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            Sports-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            Entertainment-->
-<!--        </div>-->
-<!--        <div class="wd-explore-content wd-explore-bg-color-black wd-fg-color-gray wd-head-border">-->
+<!--    <div class="wd-bg-color-black">-->
+<!--        <div class="wd-content">-->
+<!--            <div class="col-half">-->
+<!--                <h2>Vertical Center</h2>-->
+<!--                <p>In this example, we use positioning and the transform property to vertically center an element inside a container element:</p>-->
 
-<!--            <div class="wd-float-left wd-head-width wd-head-padding wd-head-margin">-->
-<!--                For you-->
-<!--            </div>-->
-<!--            <div class="wd-float-left wd-head-width wd-head-padding wd-head-margin ">-->
-<!--                Trending-->
-<!--            </div>-->
-<!--            <div class="wd-float-left wd-head-width wd-head-padding wd-head-margin ">-->
-<!--                COVID-19-->
-<!--            </div>-->
-<!--            <div class="wd-float-left wd-head-width wd-head-padding wd-head-margin ">-->
-<!--                News-->
-<!--            </div>-->
-<!--            <div class="wd-float-left wd-head-width wd-head-padding wd-head-margin ">-->
-<!--                Sports-->
-<!--            </div>-->
-<!--            <div class="wd-float-left wd-head-width wd-head-padding wd-head-margin ">-->
-<!--                Entertainment-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="wd-row">-->
-<!--        <div class="wd-left-letter wd-explore-bg-color-black wd-fg-color-white">-->
-<!--            B-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-explore-bg-color-black wd-link-highlighted-color">-->
-<!--                <div class="wd-link-border">For you</div>-->
 
 <!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-explore-bg-color-black wd-link-color">-->
-<!--                Trending-->
+<!--            <div class="col-half">-->
+
+<!--                <div class="wd-container">-->
+<!--                    <div class="vertical-center">-->
+<!--                        <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
+<!--                             src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
+
+<!--                    </div>-->
+<!--                </div>-->
 <!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-explore-bg-color-black wd-link-color">-->
-<!--                COVID-19-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-explore-bg-color-black wd-link-color">-->
-<!--                NEWS-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-explore-bg-color-black wd-link-color">-->
-<!--                Sports-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-explore-bg-color-black wd-link-color">-->
-<!--                Entertainment-->
-<!--            </div>-->
+<!--            <div class="wd-clear"></div>-->
+
 <!--        </div>-->
 <!--    </div>-->
 
-<!--    <div class="wd-row">-->
-<!--        <div class="wd-left-letter wd-explore-bg-color-black wd-fg-color-white">-->
-<!--            B-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-text-center wd-link-border wd-link-highlighted-color">-->
-<!--                    For you-->
+
+
+
+
+
+<!--de-comment the following codes for more understanding-->
+<!--    <div class="content_2">-->
+<!--        <div class="content">-->
+<!--            <div class="left">-->
+<!--                <p>some content</p>-->
 <!--            </div>-->
+<!--            <div class="right">-->
+<!--                <p>some content</p>-->
+<!--            </div>-->
+<!--            <div class="clear"></div>-->
 <!--        </div>-->
 
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color wd-head-padding">-->
-<!--                Trending-->
+<!--    </div>-->
+<!--    test-->
+<!--    <div class="content_2">-->
+<!--        <div class="content">-->
+<!--            <div class="left">-->
+<!--                <p>some content</p>-->
 <!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                COVID-19-->
+<!--            <div class="left">-->
+<!--                <p>some content4</p>-->
 <!--            </div>-->
+<!--            <img class="wd-float-right "-->
+<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+
+<!--            <div class="clear"></div>-->
 <!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                NEWS-->
+
+<!--    </div>-->
+<!--    test2-->
+<!--    <div class="content_2">-->
+<!--        <div class="content_3">-->
+<!--            <div class="left">-->
+<!--                <p>some content</p>-->
 <!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                Sports-->
+<!--            <div class="left">-->
+<!--                <p>some content2</p>-->
 <!--            </div>-->
+<!--            <img class="wd-float-right "-->
+<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+
+<!--            <div class="clear"></div>-->
 <!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                Entertainment-->
+
+<!--    </div>-->
+<!--    test3-->
+<!--    <div class="content_2">-->
+<!--        <div class="content_3">-->
+<!--            <div class="left2">-->
+<!--                <p>some content</p>-->
 <!--            </div>-->
+<!--            <div class="left">-->
+<!--                <p>some content2</p>-->
+<!--            </div>-->
+<!--            <img class="wd-float-right "-->
+<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+
+<!--            <div class="clear"></div>-->
 <!--        </div>-->
+<!--        <div class="content_3">-->
+<!--            <div class="left2">-->
+<!--                <p>some content</p>-->
+<!--            </div>-->
+<!--            <div class="left">-->
+<!--                <p>some content2</p>-->
+<!--            </div>-->
+<!--            <img class="wd-float-right "-->
+<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+
+<!--            <div class="clear"></div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--    testtest-->
+<!--    <div class="content_2">-->
+<!--        <div class="content_4">-->
+<!--            <div class="left">-->
+<!--                <p>some content5</p>-->
+<!--            </div>-->
+<!--            <div class="left">-->
+<!--                <p>some content5</p>-->
+<!--            </div>-->
+<!--            <img class="wd-float-right "-->
+<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+
+<!--            <div class="clear"></div>-->
+<!--        </div>-->
+<!--    test test test test-->
+<!--    </div>-->
+<!--    test test test-->
+<!--    <div class="content_2">-->
+<!--        <div class="content">-->
+<!--            <div class="left">-->
+<!--                <p>some content</p>-->
+<!--            </div>-->
+<!--            <div class="left">-->
+<!--                <p>some content4</p>-->
+<!--            </div>-->
+<!--            <img class="wd-float-right "-->
+<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+
+<!--            <div class="clear"></div>-->
+<!--        </div>-->
+<!--        <div class="content">-->
+<!--            <div class="left">-->
+<!--                <p>some content5</p>-->
+<!--            </div>-->
+<!--            <div class="left">-->
+<!--                <p>some content6</p>-->
+<!--            </div>-->
+<!--            <img class="wd-float-right "-->
+<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+
+<!--            <div class="clear"></div>-->
+<!--        </div>-->
+<!--&lt;!&ndash;        https://stackoverflow.com/questions/20180081/css-background-color-with-floating-elements&ndash;&gt;-->
 <!--    </div>-->
 
-<!--    <div class="wd-row">-->
-<!--        <div class="wd-left-letter wd-explore-bg-color-black wd-fg-color-white ">-->
-<!--            B-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-head-padding wd-link-border wd-link-highlighted-color">-->
-<!--                For you-->
-<!--            </div>-->
-<!--        </div>-->
 
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color wd-head-padding">-->
-<!--                Trending-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                COVID-19-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                NEWS-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                Sports-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-<!--            <div class="wd-float-left wd-explore-bg-color-black wd-link-color">-->
-<!--                Entertainment-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-
-    <div class="wd-row wd-explore-bg-color-black">
-        <div class="wd-left-letter wd-float-left wd-explore-bg-color-black wd-fg-color-white wd-head-padding wd-text-center wd-link-border-other">
-            B
-        </div>
-<!--        <div class="wd-explore-bg-color-black">-->
-            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-head-padding wd-text-center wd-link-border wd-link-highlighted-color">
-                For you
-            </div>
-<!--        </div>-->
-
-<!--        <div class="wd-explore-bg-color-black">-->
-            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-head-padding wd-text-center wd-link-border-other wd-link-color ">
-                Trending
-            </div>
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-head-padding wd-text-center wd-link-border-other wd-link-color ">
-                COVID-19
-            </div>
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-head-padding wd-text-center wd-link-border-other wd-link-color ">
-                NEWS
-            </div>
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-head-padding wd-text-center wd-link-border-other wd-link-color ">
-                Sports
-            </div>
-<!--        </div>-->
-<!--        <div class="wd-explore-bg-color-black">-->
-            <div class="wd-col-one-sixth wd-float-left wd-explore-bg-color-black wd-head-padding wd-text-center wd-link-border-other wd-link-color ">
-                Entertainment
-            </div>
-<!--        </div>-->
-    </div>
-
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            <div class="pos-relative-center">-->
-<!--                For you-->
-<!--            </div>-->
-
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            Trending-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            COVID-19-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            News-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            Sports-->
-<!--        </div>-->
-<!--        <div class="wd-head wd-explore-bg-color-black wd-fg-color-gray wd-head-border wd-head-padding wd-head-margin">-->
-<!--            Entertainment-->
-<!--        </div>-->
-    <div class="wd-row">
-        <div class="wd-left-letter">
-            C
-
-        </div>
-        <div class="wd-explore-content">
-            d
-        </div>
-    </div>
 
 </body>
 </html>
