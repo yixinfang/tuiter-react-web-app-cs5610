@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <head>
+        <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+              rel="stylesheet"/>
+        <link href="index.css"
+              rel="stylesheet"/>
+        <link href="../style.css"
+              rel="stylesheet"/>
+    </head>
+</head>
+<body>
+    <div class="container mt-2">
+        <div class="row">
+            <!--            the left column, the navigation side bar-->
+            <div class="col-2 col-md-2 col-lg-1 col-xl-2">
+                <div class="list-group mb-2">
+                    <a class="list-group-item border-0"><i class="fab fa-twitter fa-2x" style="color:#1d9bf0"></i> </a>
+                    <!--                    <a class="list-group-item d-inline"><i class="fas fa-home"></i> <span class="d-none d-lg-inline-block">Home</span></a>-->
+                    <a class="list-group-item border-0">
+                        <div class="d-none d-xl-block "><i class="fas fa-home"></i><span style="font-size: 18px;">&nbsp;&nbsp;&nbsp;Home</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-home"></i></div>
+                    </a>
+                    <a class="list-group-item border-0">
+                        <div class="d-none d-xl-block"><i class="fas fa-hashtag"></i><span class="fw-bold" style="font-size: 18px;">&nbsp;&nbsp;&nbsp; Explore</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-hashtag"></i></div>
+                    </a>
+                    <a class="list-group-item border-0">
+                        <div class="d-none d-xl-block"><i class="fas fa-bell"></i><span>&nbsp;&nbsp;&nbsp; Notifications</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-bell"></i></div>
+                    </a>
+                    <a class="list-group-item border-0">
+                        <div class="d-none d-xl-block"><i class="far fa-envelope "></i><span>&nbsp;&nbsp;&nbsp; Messages</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-envelope"></i></div>
+                    </a>
+                    <!--                    <a class="list-group-item"><i class="fas fa-envelope"></i> Messages</a>-->
+                    <a class="list-group-item border-0">
+                        <div class="d-none d-xl-block"><i class="far fa-bookmark "></i><span>&nbsp;&nbsp;&nbsp;&nbsp;Bookmarks</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-bookmark"></i></div>
+                    </a>
+                    <!--                    <a class="list-group-item"><i class="fas fa-bookmark"></i> Bookmarks</a>-->
+                    <a class="list-group-item border-0">
+                        <div class="d-none d-xl-block"><i class="fas fa-fire"></i><span>&nbsp;&nbsp;&nbsp; Top Articles</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-fire"></i></div>
+                    </a>
+                    <!--                    <a class="list-group-item"><i class="fas fa-list"></i> Lists</a>-->
+                    <a class="list-group-item border-0">
+                        <div class="d-none d-xl-block"><i class="far fa-user"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;Profile</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-user"></i></div>
+                    </a>
+                    <a class="list-group-item border-0">
+<!--                        <div class="d-none d-xl-block">-->
+<!--                            <span class="fa-stack">-->
+<!--                                <i class="far fa-circle fa-stack-2x "></i><i class="fas fa-ellipsis-h fa-stack-1x  "></i></span>-->
+<!--                            <span>&nbsp;&nbsp;&nbsp;More</span> </div>-->
+
+                        <div class="d-none d-xl-block"><i class="fas fa-ellipsis-h"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;More</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-ellipsis-h"></i></div>
+                    </a>
+                </div>
+                <a href="#" class="btn btn-info form-control  fw-bold"  style="background-color: #1d9bf0; color: white;font-size: 14px; padding-top: 12px;padding-bottom: 12px;border-radius: 30px;" type="button">Tweet</a>
+            </div>
+            <!--            the middle column, the main content-->
+            <div class="col-10 col-xl-6 col-md-9 col-lg-7" style="border-left: #efeff1 solid 1px; border-right: #efeff1 solid 1px; padding-left: 0; padding-right: 0;">
+                <!--                search -->
+                <div class="row">
+                    <div class="col-10 pe-0 pe-md-3">
+                        <!--                        https://stackoverflow.com/questions/19562903/remove-padding-from-columns-in-bootstrap-3-->
+                        <div class="input-group mb-3" style="padding-left: 12px;">
+                            <button class="btn wd-btn-border" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
+                            <input type="text" class="form-control wd-form-control" placeholder="Search Twitter" aria-label="Search Twitter" aria-describedby="button-addon2">
+                        </div>
+
+                    </div>
+
+                    <div class="col-2 ps-1 ps-md-3">
+<!--                        <a href="explore-settings.html"><i class="fas fa-cog fa-2x align-middle"></i></a>-->
+                        <a href="explore-settings.html"><img class="wd-gear-icon"  style="width: 17px; padding-top: 12px; margin-right: 16px;" src="https://cdn-icons-png.flaticon.com/512/1160/1160356.png"/></a>
+                    </div>
+                </div>
+                <div class="row ms-2 me-2 mt-2">
+                    <div class="col d-flex fw-bold"><span class="pb-2 wd-header-border">For you</span></div>
+                    <div class="col ms-2 d-flex"><span class="pb-2">Trending</span></div>
+                    <div class="col ms-2 d-flex"><span class="pb-2">News</span></div>
+                    <div class="col mb-2 ms-2 d-flex"><span class="pb-0">Sports</span></div>
+                    <div class="ms-2 d-none d-lg-block col-lg d-flex "><span class="pb-2">Entertainment</span></div>
+                </div>
+<!--                <div class=" mb-2 mt-2">-->
+<!--                    <p>DASHBOARD</p>-->
+<!--                    &lt;!&ndash; Nav tabs &ndash;&gt;-->
+<!--                    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" id="sign-up-tab" data-toggle="tab" href="#sign-up" role="tab" aria-controls="sign-up" aria-selected="false">Sign-up</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+
+
+
+<!--                    <ul class="nav nav-tabs">-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link active" href="for-you.html">For you</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="trending.html">Trending</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="news.html">News</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item">-->
+<!--                            <a class="nav-link" href="sports.html">Sports</a>-->
+<!--                        </li>-->
+<!--                        <li class="nav-item d-none d-md-block">-->
+<!--                            <a class="nav-link" href="entertainment.html " tabindex="-1">Entertainment</a>-->
+<!--                        </li>-->
+<!--                    </ul>-->
+
+                    <div class="wd-margin-top-2">
+                        <!--                        <img src="../banner.webp" class="img-fluid" alt="Responsive image"/>-->
+                        <div class="wd-pos-rel" style="padding-bottom: 3px;">
+                            <!--                            https://stackoverflow.com/questions/59839349/correct-way-to-add-text-over-an-image-in-bootstrap-3-->
+                            <img src="https://www.atptour.com/en/tournaments/australian-open/580/-/media/images/news/2023/01/30/13/01/australian-open-2023-tournament-image.jpg" class="img-fluid" alt="Responsive image"/>
+                            <div class="wd-banner-content text-white" style="bottom: 10px; left: 15px;">
+                                Tennis Tournament LIVE
+                                </br>
+                                <h3 class=" fw-bold">
+                                    Australian Open 2023
+                                </h3>
+                            </div>
+
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item border-bottom-0 border-start-0 border-end-0">
+                                <div class="col-11 wd-float-left wd-fg-color-gray wd-padding-right-16">
+                                    <span>Politics • Trending</span></br>
+                                    <span class="fw-bold wd-fg-color-black">Seizures</span> </br>
+                                    <span>4,953 Tweets</span>
+                                </div>
+                                <div class="col-1 wd-float-right">
+                                    <i class="wd-float-right fas fa-ellipsis-h img-fluid mt-1" style="color:#495b69"></i>
+                                </div>
+                                <div class="wd-clear"></div>
+
+                            </li>
+
+                            <li class="list-group-item border-0">
+                                <div class="col-11 wd-float-left wd-fg-color-gray wd-padding-right-16">
+                                    <span class="fw-bold wd-fg-color-black">#InfinityPool</span> </br>
+                                    <span>See the electrifying thriller Infinity Pool in theaters - if you dare </span></br>
+
+                                    <span><i class="fas fa-share-square"></i> Promoted by NEON</span>
+                                </div>
+                                <div class="col-1 wd-float-right">
+                                    <i class="wd-float-right fas fa-ellipsis-h img-fluid mt-1" style="color:#495b69"></i>
+                                </div>
+                                <div class="wd-clear"></div>
+                            </li>
+                            <li class="list-group-item border-0">
+                                <div class="col-11 wd-float-left wd-fg-color-gray wd-padding-right-16">
+                                    <span>Politics • Trending</span> </br>
+                                    <span class="fw-bold wd-fg-color-black">Durham</span> </br>
+                                    <span>Trending with <span style="color: #31a4f1">Barr</span>, <span style="color: #31a4f1">Barr</span></span></br>
+
+                                </div>
+                                <div class="col-1 wd-float-right">
+                                    <i class="wd-float-right fas fa-ellipsis-h img-fluid mt-1" style="color:#495b69"></i>
+                                </div>
+                                <div class="wd-clear"></div>
+
+                            </li>
+
+                            <li class="list-group-item  border-top-0 border-start-0 border-end-0">
+                                <div class="col-11 wd-float-left wd-fg-color-gray wd-padding-right-16">
+                                    <span>Trending in Business and finance</span> </br>
+                                    <span class="fw-bold wd-fg-color-black">#DirectedEvolution</span> </br>
+                                    <span>172K Tweets</span></br>
+
+                                </div>
+                                <div class="col-1 wd-float-right">
+                                    <i class="wd-float-right fas fa-ellipsis-h img-fluid mt-1" style="color:#495b69"></i>
+                                </div>
+                                <div class="wd-clear"></div>
+
+                            </li>
+
+
+
+
+
+
+                        </ul>
+                    </div>
+
+
+<!--                </div>-->
+
+            </div>
+            <!--            the right column, the other side bar-->
+            <div class="d-none d-lg-block col-lg-4">
+                <ul class="list-group">
+                    <li class="list-group-item border-0" style="background-color: #f7f9f9;"> <span class="fw-bold wd-font-size-23 ">Who to follow</span></li>
+                    <li class="list-group-item border-0" style="padding-top: 16px; background-color: #f7f9f9;">
+                        <div class="row">
+                            <div class=" col-lg-2 ">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size-challenge">
+                                        <img src="https://pbs.twimg.com/profile_images/1295842645097549830/FJ16ThMG_400x400.jpg" class="img-fluid wd-float-left wd-border-radius-40"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-8 col-xl-7">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left " style="font-size: 17px;">
+                                        <span class="wd-bold-font">Northeastern U. <i class="fas fa-check-circle" style="color: #1d9bf0"></i></span>
+                                        </br>
+                                        <span style="color: #687782;">@Northeastern</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://www.northeastern.edu/" class="btn btn-primary wd-border-radius-20 wd-float-right border-0" style="background-color: black; padding-left: 18px; padding-right: 18px"><span class="fw-bold">Follow</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item border-0" style="padding-top: 16px; background-color: #f7f9f9;">
+                        <div class="row">
+                            <div class=" col-lg-2 ">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size-challenge">
+                                        <img src="https://pbs.twimg.com/profile_images/1561717677600686083/Dm80jwOp_400x400.jpg" class="img-fluid wd-float-left wd-border-radius-40"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-8 col-xl-7">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left " style="font-size: 17px;">
+                                        <span class="wd-bold-font">Matt Wallace <i class="fas fa-check-circle" style="color: #1d9bf0"></i></span>
+                                        </br>
+                                        <span style="color: #687782;">@MattWallace888</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://twitter.com/MattWallace888" class="btn btn-primary wd-border-radius-20 wd-float-right border-0" style="background-color: black; padding-left: 18px; padding-right: 18px"><span class="fw-bold">Follow</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item border-0" style="padding-top: 16px; padding-bottom: 24px;background-color: #f7f9f9;">
+                        <div class="row">
+                            <div class=" col-lg-2 ">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size-challenge">
+                                        <img src="https://play-lh.googleusercontent.com/BctQd9Bq2q6GJYUL80jwTaGcl05RFeany_m_IU5_wOa2QpEInGkPKPXg6TWIhup-KHE" class="img-fluid wd-float-left wd-border-radius-8"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-8 col-xl-7">
+                                <div class="wd-container mt-3">
+                                    <div class="wd-vertical-center wd-float-left " style="font-size: 17px; margin-top: 12px;">
+                                        <span class="wd-bold-font " >PointsBet Sportsb... <i class="fas fa-check-circle" style="color: #dba62b"></i></span>
+                                        </br>
+                                        <span style="color: #687782;">@PointsBetUSA</span>
+                                        </br>
+                                        <p style="padding-top: 6px; color: #687782;"><i class="fa fa-share-square"></i> <span style="font-size: 15px;">Promoted</span></p>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://twitter.com/MattWallace888" class="btn btn-primary wd-border-radius-20 wd-float-right border-0" style="background-color: black; padding-left: 18px; padding-right: 18px"><span class="fw-bold">Follow</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item border-0" style=" padding-bottom: 16px; background-color: #f7f9f9;">
+                        <span style="color: #31a4f1; font-size: 16px;">Show more</span>
+
+                    </li>
+<!--                    <li class="list-group-item" style="padding-top: 16px;" id="accordion">-->
+<!--                        <div class="card">-->
+<!--                            <div class="card-header" id="headingOne">-->
+<!--                                <h5 class="mb-0">-->
+<!--                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+<!--                                        Show more-->
+<!--                                    </button>-->
+<!--                                </h5>-->
+<!--                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">-->
+<!--                                    <div class="card-body">-->
+<!--                                        mmm-->
+<!--                                    </div>-->
+
+<!--                                </div>-->
+
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </li>-->
+
+
+                </ul>
+                <ul class="list-group mt-3">
+                    <li class="list-group-item border-0" style="color: #687782; font-size: 15px; padding-bottom: 3px;"> Terms of Service&nbsp;&nbsp;&nbsp;Privacy Policy&nbsp;&nbsp;&nbsp;Cookie Policy</li>
+                    <li class="list-group-item border-0 " style="color: #687782; font-size: 15px; padding-top:0; padding-bottom: 0;"> Accessibility&nbsp;&nbsp;&nbsp;Ads info&nbsp;&nbsp;&nbsp;More <i class="fas fa-ellipsis-h"></i></li>
+                    <li class="list-group-item border-0" style="color: #687782; font-size: 14px; padding-top: 3px;"> &copy; 2023 Twitter, Inc. </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

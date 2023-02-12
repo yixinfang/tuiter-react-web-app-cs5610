@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <head>
+        <link href="../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+              rel="stylesheet"/>
         <link href="index.css"
               rel="stylesheet"/>
         <link href="../style.css"
@@ -11,379 +14,800 @@
     </head>
 </head>
 <body>
-
-    <div class="wd-bg-color-black">
-        <div class="wd-content">
-<!--            content A-->
-            <div class="wd-clear">
-                <div class="wd-float-left wd-margin-left-16 wd-bg-color-darkgray wd-rounded-corners">
-                    <img class="wd-float-left wd-icon wd-margin-left-12" src="data:image/png;base64,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"/>
-                    <input class="wd-explore-search-bg-color wd-fg-color-white wd-rounded-corners wd-input-border-color wd-input-border-override" placeholder="Search Tuiter"/>
+    <div class="container mt-2">
+        <div class="row">
+<!--            the left column, the navigation side bar-->
+            <div class="col-2 col-md-2 col-lg-1 col-xl-2">
+                <div class="list-group mb-2">
+                    <a class="list-group-item"><i class="fab fa-twitter fa-1x"></i> </a>
+<!--                    <a class="list-group-item d-inline"><i class="fas fa-home"></i> <span class="d-none d-lg-inline-block">Home</span></a>-->
+                    <a class="list-group-item">
+                        <div class="d-none d-xl-block"><i class="fas fa-home"></i><span> Home</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-home"></i></div>
+                    </a>
+                    <a class="list-group-item active">
+                        <div class="d-none d-xl-block"><i class="fas fa-hashtag"></i><span> Explore</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-hashtag"></i></div>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-none d-xl-block"><i class="fas fa-bell"></i><span> Notifications</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-bell"></i></div>
+                    </a>
+                    <a class="list-group-item">
+                        <div class="d-none d-xl-block"><i class="fas fa-envelope"></i><span> Messages</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-envelope"></i></div>
+                    </a>
+<!--                    <a class="list-group-item"><i class="fas fa-envelope"></i> Messages</a>-->
+                    <a class="list-group-item">
+                        <div class="d-none d-xl-block"><i class="fas fa-bookmark"></i><span> Bookmarks</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-bookmark"></i></div>
+                    </a>
+<!--                    <a class="list-group-item"><i class="fas fa-bookmark"></i> Bookmarks</a>-->
+                    <a class="list-group-item">
+                        <div class="d-none d-xl-block"><i class="fas fa-list"></i><span> Lists</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-list"></i></div>
+                    </a>
+<!--                    <a class="list-group-item"><i class="fas fa-list"></i> Lists</a>-->
+                    <a class="list-group-item">
+                        <div class="d-none d-xl-block"><i class="fas fa-user"></i><span> Profile</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-user"></i></div>
+                    </a>
+<!--                    <a class="list-group-item"><i class="fas fa-user"></i> Profile</a>-->
+                    <a class="list-group-item">
+                        <div class="d-none d-xl-block"><i class="fas fa-ellipsis-h"></i><span> More</span> </div>
+                        <div class="d-xl-none"><i class="fas fa-ellipsis-h"></i></div>
+                    </a>
+<!--                    <a class="list-group-item"><i class="fas fa-ellipsis-h"></i> More</a>-->
+<!--                    <a class="list-group-item"><i class="fas fa-circle-ellipsis"></i> More</a>-->
                 </div>
-                <a href="../explore-settings.html"><img class="wd-gear-icon"
-                     src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX33741366.jpg"/></a>
-                <div class="wd-clear"></div>
+                <a href="#" class="btn btn-primary form-control wd-border-radius-20" type="button">Tweet</a>
             </div>
-
-<!--            content B-->
-            <div class="wd-clear">
-                <div class="wd-col-one-sixth ">
-                    <div class="wd-padding-left-16 wd-padding-top-16 wd-padding-right-16">
-                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-link-highlighted-color wd-link-border wd-bold-font">
-                            For you</span>
+<!--            the middle column, the main content-->
+            <div class="col-10 col-xl-6 col-md-9 col-lg-7">
+<!--                search -->
+                <div class="row">
+                    <div class="col-11 pe-0 pe-md-3">
+<!--                        https://stackoverflow.com/questions/19562903/remove-padding-from-columns-in-bootstrap-3-->
+                        <div class="input-group  mb-3">
+                            <button class="btn wd-btn-border" type="button" id="button-addon2"><i class="fa fa-search"></i></button>
+                            <input type="text" class="form-control wd-form-control" placeholder="Search Twitter" aria-label="Search Twitter" aria-describedby="button-addon2">
+                        </div>
+<!--                        <div class="input-group">-->
+<!--                            <input class="form-control rounded-pill py-2 pr-5 mr-1 bg-transparent" type="search" value="search" id="example-search-input1">-->
+<!--                            <span class="input-group-append">-->
+<!--                                <div class="input-group-text border-0 bg-transparent ml-n5">-->
+<!--                                    <i class="fa fa-search"></i>-->
+<!--                                </div>-->
+<!--                            </span>-->
+<!--                        </div>-->
+<!--                        <div class="input-group">-->
+<!--                            <button class="btn  bg-white  border rounded-pill ms-n3" type="button">-->
+<!--                                <i class="fa fa-search"></i>-->
+<!--                            </button>-->
+<!--                            &lt;!&ndash;                    https://stackoverflow.com/questions/61856781/how-i-can-add-a-button-inside-an-input-box-using-bootstrap&ndash;&gt;-->
+<!--                            <input class="form-control border-end-0 border rounded-pill" type="text" placeholder="Search Twitter" id="example-search-input">-->
+<!--                            &lt;!&ndash;                    <span class="input-group-append">&ndash;&gt;-->
+<!--                            &lt;!&ndash;                <button class="btn btn-outline-secondary bg-white border-start-0 border rounded-pill ms-n3" type="button">&ndash;&gt;-->
+<!--                            &lt;!&ndash;                    <i class="fa fa-search"></i>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                </button>&ndash;&gt;-->
+<!--                            &lt;!&ndash;                    https://stackoverflow.com/questions/45696685/search-input-with-an-icon-bootstrap&ndash;&gt;-->
+<!--                            &lt;!&ndash;            </span>&ndash;&gt;-->
+<!--                        </div>-->
                     </div>
-                </div>
 
-                <div class="wd-col-one-sixth ">
-                    <div class="wd-padding-left-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">
-                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">
-                            Trending</span>
+                    <div class="col-1 ps-1 ps-md-3">
+                        <a href="explore-settings.html"><i class="fas fa-cog fa-2x align-middle"></i></a>
                     </div>
-                </div>
-                <div class="wd-col-one-sixth ">
-                    <div class="wd-padding-left-16  wd-padding-top-16 wd-padding-right-16 wd-text-center">
-                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">
-                            COVID-19</span>
-                    </div>
-                </div>
-                <div class="wd-col-one-sixth ">
-                    <div class="wd-padding-left-16  wd-padding-top-16 wd-padding-right-16 wd-text-center">
-                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">
-                            NEWS</span>
-                    </div>
-                </div>
-                <div class="wd-col-one-sixth ">
-                    <div class="wd-padding-left-16 wd-padding-bottom-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">
-                        <span class="wd-font-size-15 wd-font wd-margin-bottom-0 wd-bold-font">
-                            Sports</span>
-                    </div>
-                </div>
 
-                <div class="wd-col-one-sixth ">
-                    <div class="wd-padding-left-16 wd-padding-bottom-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">
-                        <span class="wd-link-border-other wd-link-color wd-font-size-15 wd-font wd-bold-font">
-                            Entertainment</span>
-                    </div>
-                </div>
-                <div class="wd-clear"></div>
-            </div>
-        </div>
-
-        <div class="wd-content wd-padding-bottom-16">
-        </div>
-        <!--        content C-->
-        <div class="wd-content">
-            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-padding-right-16 wd-font-size-13 wd-link-color wd-font">
-
-<!--                <h3 class="wd-margin-block-0">-->
-<!--                    Trending in Science</br>-->
-<!--                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>-->
-<!--                    55.6K Tweets-->
-<!--                </h3>-->
-                <h3 class="wd-margin-block-0">Trending in Science</h3>
-                <h3 class="wd-margin-block-0 wd-fg-color-white wd-bold-font">Starship</h3>
-                <h3 class="wd-margin-block-0">55.6K Tweets</h3>
-<!--                <p>-->
-<!--                    Trending in Science</br>-->
-<!--                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>-->
-<!--                    55.6K Tweets-->
-<!--                </p>-->
-<!--                <p>-->
-<!--                    Trending in Science</br>-->
-<!--                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>-->
-<!--                    55.6K Tweets-->
-<!--                </p>-->
-
-<!--                Trending in Science</br>-->
-<!--                <span class="wd-fg-color-white wd-bold-font">Starship</span></br>-->
-<!--                55.6K Tweets-->
-            </div>
-
-
-            <div class="wd-clear"></div>
-        </div>
-
-        <!--        content C-->
-        <div class="wd-content">
-            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-padding-right-16 wd-font-size-13 wd-link-color wd-font">
-                <h3 class="wd-margin-block-0">Trending in United States</h3>
-                <h3 class="wd-margin-block-0 wd-fg-color-white wd-bold-font">Wonder Bread</h3>
-                <h3 class="wd-margin-block-0">1,259 Tweets</h3>
-            </div>
-            <div class="wd-clear"></div>
-        </div>
-
-        <!--        content D-->
-        <div class="wd-content">
-            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
-                <h3 class="wd-margin-block-0">New York Times <span class="wd-link-color">Yesterday</span></h3>
-                <h3 class="wd-margin-block-0">Patrick Mahomes Leads Kansas City Back to the Super Bowl</h3>
-<!--                <p>Patrick Mahomes Leads Kansas City Back to the Super Bowl</p>-->
-
-            </div>
-            <div class="wd-bg-color-black">
-                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-5 wd-margin-right-16"
-                     src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>
-            </div>
-            <div class="wd-clear"></div>
-        </div>
-
-        <div class="wd-content">
-            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
-                <h3 class="wd-margin-block-0">Bloomberg Opinion <span class="wd-link-color">Yesterday</span></h3>
-                <h3 class="wd-margin-block-0">Think about getting a booster? Read this first.</h3>
-
-            </div>
-            <div class="wd-bg-color-black">
-                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-10 wd-margin-right-16"
-                     src="https://cdn.theatlantic.com/thumbor/yK90YxMSAx48kd35wX6cKdTeySQ=/0x0:8334x4688/1600x900/media/img/mt/2021/09/0921_Rachel_Katie_BoosterTiming_square_01/original.png"/>
-            </div>
-            <div class="wd-clear"></div>
-        </div>
-
-
-        <div class="wd-content">
-            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
-                <h3 class="wd-margin-block-0"> <span class="wd-link-color">COVID-19</span></h3>
-                <h3 class="wd-margin-block-0">COVID-19: News and updates for Massachusetts</h3>
-
-            </div>
-            <div class="wd-bg-color-black">
-                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-15 wd-margin-right-16"
-                     src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>
-            </div>
-            <div class="wd-clear"></div>
-        </div>
-        <!--        content D-->
-<!--        <div class="wd-content">-->
-<!--            <div class="wd-float-left wd-bg-color-black">-->
-<!--                COVID-19-->
-<!--                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
-<!--            </div>-->
-<!--            <div class="wd-bg-color-black"></div>-->
-<!--                <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
-<!--                     src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
-<!--&lt;!&ndash;                     src="https://www.mass.gov/libraries/mayflower-artifacts/assets/images/logo/stateseal-color.png"/>&ndash;&gt;-->
-<!--&lt;!&ndash;                     src="https://www.southwickma.org/sites/g/files/vyhlif1241/f/resize/imce/safe_image1-290x151.png"/>&ndash;&gt;-->
-<!--            <div class="wd-clear"></div>-->
-<!--        </div>-->
-<!--        ####-->
-<!--        <div class="wd-content">-->
-<!--            <div class="wd-float-left wd-bg-color-black">-->
-<!--                COVID-19-->
-<!--                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
-<!--            </div>-->
-<!--            <div class="wd-float-right wd-margin-right-16 wd-bg-color-black wd-pos-relative">-->
-<!--&lt;!&ndash;                <div class="wd-pos-vertically-center ">&ndash;&gt;-->
-<!--                <div class=" wd-vertical-align">-->
-<!--                    <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
-<!--                         src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
-<!--                </div>-->
-
-<!--            </div>-->
-<!--            <div class="wd-clear"></div>-->
-<!--        </div>-->
-<!-- #####-->
-<!--        <div class="wd-clear">-->
-<!--            <div class="wd-float-left wd-col-three-forth">-->
-<!--                COVID-19-->
-<!--                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
-<!--            </div>-->
-<!--            <div class="wd-float-left wd-col-one-forth">-->
-<!--                <div class="wd-container">-->
-<!--                    <div class="vertical-center">-->
-<!--                        <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
-<!--                             src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
-
+<!--                    <div class="col-sm-10 input-group wd-float-left">-->
+<!--                        <button class="btn btn-outline-secondary bg-white  border rounded-pill ms-n3" type="button">-->
+<!--                            <i class="fa fa-search"></i>-->
+<!--                        </button>-->
+<!--                        &lt;!&ndash;                    https://stackoverflow.com/questions/61856781/how-i-can-add-a-button-inside-an-input-box-using-bootstrap&ndash;&gt;-->
+<!--                        <input class="form-control border-end-0 border rounded-pill" type="text" placeholder="Search Twitter" id="example-search-input">-->
+<!--                        &lt;!&ndash;                    <span class="input-group-append">&ndash;&gt;-->
+<!--                        &lt;!&ndash;                <button class="btn btn-outline-secondary bg-white border-start-0 border rounded-pill ms-n3" type="button">&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    <i class="fa fa-search"></i>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                </button>&ndash;&gt;-->
+<!--                        &lt;!&ndash;                    https://stackoverflow.com/questions/45696685/search-input-with-an-icon-bootstrap&ndash;&gt;-->
+<!--                        &lt;!&ndash;            </span>&ndash;&gt;-->
 <!--                    </div>-->
-
-<!--                </div>-->
-<!--            </div>-->
-<!--            <div class="wd-clear"></div>-->
-
-<!--        </div>-->
-
-    </div>
-
-    <div class="wd-bg-color-black">
-        <div class="wd-content">
-            <div class="wd-margin-right-16 wd-margin-left-16">
-                <div class="wd-float-left wd-col-three-forth">
-                    <div class="wd-float-left wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">
-                        <h3 class="wd-margin-block-0"> <span class="wd-link-color">IT technology</span></h3>
-                        <h3 class="wd-margin-block-0">Web Development: Welcome to learn new full stack technology</h3>
-
-                    </div>
-<!--                    <div class="wd-padding-top-16">-->
-<!--                        COVID-19-->
-<!--                        <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>-->
-<!--                    </div>-->
-
+<!--                    <a class="col-sm-2 wd-float-right" href="#"><i class="fa fa-gear" style="color:Blue"></i></a>-->
+<!--                    <div class="wd-clear"></div>-->
                 </div>
+                <div class=" mb-2 mt-2">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="for-you.html">For you</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="trending.html">Trending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sports.html">Sports</a>
+                        </li>
+                        <li class="nav-item d-none d-md-block">
+                            <a class="nav-link" href="entertainment.html " tabindex="-1">Entertainment</a>
+                        </li>
+                    </ul>
 
-                <div class="wd-float-left wd-col-one-forth">
-
-                    <div class="wd-container">
-                        <div class="vertical-center">
-                            <img class="wd-float-right wd-float-right-1 wd-bg-color-black"
-                                 src="../banner.webp"/>
-<!--                                 src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
+                    <div class="mt-2">
+<!--                        <img src="../banner.webp" class="img-fluid" alt="Responsive image"/>-->
+                        <div class="wd-banner">
+<!--                            https://stackoverflow.com/questions/59839349/correct-way-to-add-text-over-an-image-in-bootstrap-3-->
+                            <img src="https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg" class="img-fluid" alt="Responsive image"/>
+                            <div class="wd-banner-content">
+                                <h2 class="text-white fw-bold">
+                                    SpaceX's Starship
+                                </h2>
+                            </div>
 
                         </div>
+                        <ul class="list-group">
+<!--                            <li class="list-group-item service-list">-->
+<!--                                <h3>The list of tuits in the main content, rendered in the center column</h3>-->
+<!--                                <p>-->
+<!--                                    The list of tuits in the main content, rendered in the center column-->
+<!--                                </p>-->
+<!--                                <a href=""><img src="https://www.google.co.in/images/srpr/logo4w.png" alt="icon" width="200" height="auto" /></a>-->
+
+<!--                            </li>-->
+<!--                            <li class="list-group-item">-->
+<!--                                <div class="col-10 wd-float-left bg-success">-->
+<!--                                    hello-->
+<!--                                </div>-->
+<!--                                <div class="col-2 wd-float-right bg-info">-->
+<!--                                    <img src="../maruko.jpeg" class="img-fluid"/>-->
+<!--                                    <div class="wd-clear"></div>-->
+<!--                                </div>-->
+<!--                                <div class="wd-clear"></div>-->
+
+<!--                            </li>-->
+                            <li class="list-group-item">
+                                <div class="col-10 wd-float-left wd-fg-color-black wd-padding-right-16">
+                                    <span class="wd-fg-color-gray">Web Development</span></br>
+                                    <span class="fw-bold">ReactJS</span> <i class="fas fa-check-circle"></i> <span class="wd-fg-color-gray">- 2h</span> </br>
+                                    <span class="fw-bold">React.js is a component based front end library that makes it very easy to build
+                                        Single Page Applications or SPAs</span>
+
+                                </div>
+                                <div class="col-2 wd-float-right">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ02jcTAy6AjS6poKeVmEjp-q5A1-VowyNWIQ&usqp=CAU" class="img-fluid"/>
+<!--                                    <div class="wd-clear"></div>-->
+                                </div>
+                                <div class="wd-clear"></div>
+
+                            </li>
+                            <li class="list-group-item">
+                                <div class="col-10 wd-float-left wd-fg-color-black wd-padding-right-16">
+                                    <span class="wd-fg-color-gray">Web Development</span></br>
+                                    <span class="fw-bold">JavaScript</span> <i class="fas fa-check-circle"></i> <span class="wd-fg-color-gray">- 2h</span> </br>
+                                    <span class="fw-bold">JavaScript is programming language that can run on browsers as well as desktops </span> </br>
+                                    <span class="wd-fg-color-gray">123K Tweets</span>
+
+                                </div>
+                                <div class="col-2 wd-float-right">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" class="img-fluid wd-border-radius-20"/>
+                                </div>
+                                <div class="wd-clear"></div>
+
+                            </li>
+
+                            <li class="list-group-item">
+                                <div class="col-10 wd-float-left wd-fg-color-black wd-padding-right-16">
+                                    <span class="wd-fg-color-gray">Web Development</span></br>
+                                    <span class="fw-bold">jQuery</span></br>
+                                    <span class="wd-fg-color-gray">123K Tweets</span>
+                                </div>
+                                <div class="col-2 wd-float-right">
+                                    <img src="https://www.interviewbit.com/blog/wp-content/uploads/2021/10/jquery-logo-vertical_large_square.png" class="img-fluid"/>
+                                </div>
+                                <div class="wd-clear"></div>
+                            </li>
+
+                            <li class="list-group-item">
+                                <div class="col-10 wd-float-left wd-fg-color-black wd-padding-right-16">
+                                    <span class="wd-fg-color-gray">Web Development</span></br>
+                                    <span class="fw-bold">NodeJS</span> <i class="fas fa-check-circle"></i> <span class="wd-fg-color-gray">- 2h</span> </br>
+                                    <span class="wd-fg-color-gray">123K Tweets</span>
+                                </div>
+                                <div class="col-2 wd-float-right">
+                                    <img src="https://cdn.iconscout.com/icon/free/png-256/node-js-1174925.png" class="img-fluid"/>
+                                </div>
+                                <div class="wd-clear"></div>
+                            </li>
+
+                        </ul>
+
                     </div>
+
+
                 </div>
-                <div class="wd-clear"></div>
+
+<!--                <div class="mb-2">-->
+
+<!--                </div>-->
+
             </div>
+<!--            the right column, the other side bar-->
+            <div class="d-none d-lg-block col-lg-4">
+                <ul class="list-group">
+                    <li class="list-group-item fw-bold">Who to follow</li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class=" col-lg-2 col-xl-2">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" class="img-fluid wd-float-left"/>
+<!--                                        <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" class="wd-img-fluid wd-float-left"/>-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-6 col-xl-7">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left ">
+                                        <span class="wd-bold-font">Java <i class="fas fa-check-circle"></i></span>
+                                        </br>
+                                        <span>@Java</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://en.wikipedia.org/wiki/Java_(programming_language)" class="btn btn-primary wd-border-radius-20 wd-float-right">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class=" col-lg-2 ">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size">
+                                        <img src="https://res.cloudinary.com/crunchbase-production/image/upload/j3dbh6kok0dket3uz2vy" class="img-fluid wd-float-left wd-border-radius-40"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-8 col-xl-7">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left ">
+                                        <span class="wd-bold-font">Relativity Space <i class="fas fa-check-circle"></i></span>
+                                        </br>
+                                        <span>@relativityspace</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://www.relativityspace.com/" class="btn btn-primary wd-border-radius-20 wd-float-right">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class=" col-lg-2">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size">
+                                        <img src="https://cdn.worldvectorlogo.com/logos/virgin-1.svg" class="img-fluid wd-float-left"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-8 col-xl-7">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left ">
+                                        <span class="wd-bold-font">Virgin Galactic <i class="fas fa-check-circle"></i></span>
+                                        </br>
+                                        <span>@virgingalactic</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-2 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://www.virgingalactic.com/" class="btn btn-primary wd-border-radius-20 wd-float-right">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class=" col-lg-2 col-xl-2">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size">
+                                        <img src="http://www.nasa.gov/sites/default/files/images/nasaLogo-570x450.png" class="img-fluid wd-float-left"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-6 col-xl-7">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left ">
+                                        <span class="wd-bold-font">NASA <i class="fas fa-check-circle"></i></span>
+                                        </br>
+                                        <span>@NASA</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://www.nasa.gov/" class="btn btn-primary wd-border-radius-20 wd-float-right">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class=" col-lg-2 col-xl-2">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left wd-image-size">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Tesla_T_symbol.svg/800px-Tesla_T_symbol.svg.png" class="img-fluid wd-float-left"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=" col-lg-6 col-xl-7">
+                                <div class="wd-container">
+                                    <div class="wd-vertical-center wd-float-left ">
+                                        <span class="wd-bold-font">Tesla <i class="fas fa-check-circle"></i></span>
+                                        </br>
+                                        <span>@Tesla</span>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-xl-3">
+                                <div class="wd-container">
+                                    <div class="vertical-center">
+                                        <a href="https://www.tesla.com/" class="btn btn-primary wd-border-radius-20 wd-float-right">Follow</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wd-clear"></div>
+                        </div>
+
+                    </li>
 
 
+
+<!--                    -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--                    <li class="list-group-item">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col-2">-->
+<!--                                <div class="wd-container">-->
+<!--                                    <div class="wd-vertical-center wd-float-left">-->
+<!--                                        <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" class="wd-img-fluid wd-float-left"/>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col-7">-->
+<!--                                <div class="wd-container">-->
+<!--                                    <div class="wd-vertical-center wd-float-left">-->
+<!--                                        <span class="wd-bold-font">Java <i class="fas fa-check-circle"></i></span>-->
+<!--                                        </br>-->
+<!--                                        <span>@Java</span>-->
+<!--                                    </div>-->
+
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-3">-->
+<!--                                <div class="wd-container">-->
+<!--                                    <div class="vertical-center">-->
+<!--                                        <a href="#" class="btn btn-primary wd-float-right">Follow</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="wd-clear"></div>-->
+<!--                        </div>-->
+
+<!--                    </li>-->
+
+
+                </ul>
+            </div>
         </div>
+
     </div>
 
 <!--    <div class="wd-bg-color-black">-->
 <!--        <div class="wd-content">-->
-<!--            <div class="col-half">-->
-<!--                <h2>Vertical Center</h2>-->
-<!--                <p>In this example, we use positioning and the transform property to vertically center an element inside a container element:</p>-->
-
-
+<!--&lt;!&ndash;            content A&ndash;&gt;-->
+<!--            <div class="wd-clear">-->
+<!--                <div class="wd-float-left wd-margin-left-16 wd-bg-color-darkgray wd-rounded-corners">-->
+<!--                    <img class="wd-float-left wd-icon wd-margin-left-12" src="data:image/png;base64,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"/>-->
+<!--                    <input class="wd-explore-search-bg-color wd-fg-color-white wd-rounded-corners wd-input-border-color wd-input-border-override" placeholder="Search Tuiter"/>-->
+<!--                </div>-->
+<!--                <a href="../explore-settings.html"><img class="wd-gear-icon"-->
+<!--                     src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX33741366.jpg"/></a>-->
+<!--                <div class="wd-clear"></div>-->
 <!--            </div>-->
-<!--            <div class="col-half">-->
 
-<!--                <div class="wd-container">-->
-<!--                    <div class="vertical-center">-->
-<!--                        <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
-<!--                             src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
-
+<!--&lt;!&ndash;            content B&ndash;&gt;-->
+<!--            <div class="wd-clear">-->
+<!--                <div class="wd-col-one-sixth ">-->
+<!--                    <div class="wd-padding-left-16 wd-padding-top-16 wd-padding-right-16">-->
+<!--                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-link-highlighted-color wd-link-border wd-bold-font">-->
+<!--                            For you</span>-->
 <!--                    </div>-->
 <!--                </div>-->
+
+<!--                <div class="wd-col-one-sixth ">-->
+<!--                    <div class="wd-padding-left-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">-->
+<!--                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">-->
+<!--                            Trending</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="wd-col-one-sixth ">-->
+<!--                    <div class="wd-padding-left-16  wd-padding-top-16 wd-padding-right-16 wd-text-center">-->
+<!--                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">-->
+<!--                            COVID-19</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="wd-col-one-sixth ">-->
+<!--                    <div class="wd-padding-left-16  wd-padding-top-16 wd-padding-right-16 wd-text-center">-->
+<!--                        <span class="wd-font-size-15 wd-padding-bottom-16 wd-font wd-bold-font">-->
+<!--                            NEWS</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="wd-col-one-sixth ">-->
+<!--                    <div class="wd-padding-left-16 wd-padding-bottom-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">-->
+<!--                        <span class="wd-font-size-15 wd-font wd-margin-bottom-0 wd-bold-font">-->
+<!--                            Sports</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="wd-col-one-sixth ">-->
+<!--                    <div class="wd-padding-left-16 wd-padding-bottom-16 wd-padding-top-16 wd-padding-right-16 wd-text-center">-->
+<!--                        <span class="wd-link-border-other wd-link-color wd-font-size-15 wd-font wd-bold-font">-->
+<!--                            Entertainment</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="wd-clear"></div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="wd-content wd-padding-bottom-16">-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        content C&ndash;&gt;-->
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-padding-right-16 wd-font-size-13 wd-link-color wd-font">-->
+
+<!--&lt;!&ndash;                <h3 class="wd-margin-block-0">&ndash;&gt;-->
+<!--&lt;!&ndash;                    Trending in Science</br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    55.6K Tweets&ndash;&gt;-->
+<!--&lt;!&ndash;                </h3>&ndash;&gt;-->
+<!--                <h3 class="wd-margin-block-0">Trending in Science</h3>-->
+<!--                <h3 class="wd-margin-block-0 wd-fg-color-white wd-bold-font">Starship</h3>-->
+<!--                <h3 class="wd-margin-block-0">55.6K Tweets</h3>-->
+<!--&lt;!&ndash;                <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                    Trending in Science</br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    55.6K Tweets&ndash;&gt;-->
+<!--&lt;!&ndash;                </p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                    Trending in Science</br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <span class="wd-fg-color-white wd-bold-font wd-spacing-4">Starship</span></br>&ndash;&gt;-->
+<!--&lt;!&ndash;                    55.6K Tweets&ndash;&gt;-->
+<!--&lt;!&ndash;                </p>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                Trending in Science</br>&ndash;&gt;-->
+<!--&lt;!&ndash;                <span class="wd-fg-color-white wd-bold-font">Starship</span></br>&ndash;&gt;-->
+<!--&lt;!&ndash;                55.6K Tweets&ndash;&gt;-->
+<!--            </div>-->
+
+
+<!--            <div class="wd-clear"></div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash;        content C&ndash;&gt;-->
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-padding-right-16 wd-font-size-13 wd-link-color wd-font">-->
+<!--                <h3 class="wd-margin-block-0">Trending in United States</h3>-->
+<!--                <h3 class="wd-margin-block-0 wd-fg-color-white wd-bold-font">Wonder Bread</h3>-->
+<!--                <h3 class="wd-margin-block-0">1,259 Tweets</h3>-->
 <!--            </div>-->
 <!--            <div class="wd-clear"></div>-->
+<!--        </div>-->
+
+<!--        &lt;!&ndash;        content D&ndash;&gt;-->
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">-->
+<!--                <h3 class="wd-margin-block-0">New York Times <span class="wd-link-color">Yesterday</span></h3>-->
+<!--                <h3 class="wd-margin-block-0">Patrick Mahomes Leads Kansas City Back to the Super Bowl</h3>-->
+<!--&lt;!&ndash;                <p>Patrick Mahomes Leads Kansas City Back to the Super Bowl</p>&ndash;&gt;-->
+
+<!--            </div>-->
+<!--            <div class="wd-bg-color-black">-->
+<!--                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-5 wd-margin-right-16"-->
+<!--                     src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--            </div>-->
+<!--            <div class="wd-clear"></div>-->
+<!--        </div>-->
+
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">-->
+<!--                <h3 class="wd-margin-block-0">Bloomberg Opinion <span class="wd-link-color">Yesterday</span></h3>-->
+<!--                <h3 class="wd-margin-block-0">Think about getting a booster? Read this first.</h3>-->
+
+<!--            </div>-->
+<!--            <div class="wd-bg-color-black">-->
+<!--                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-10 wd-margin-right-16"-->
+<!--                     src="https://cdn.theatlantic.com/thumbor/yK90YxMSAx48kd35wX6cKdTeySQ=/0x0:8334x4688/1600x900/media/img/mt/2021/09/0921_Rachel_Katie_BoosterTiming_square_01/original.png"/>-->
+<!--            </div>-->
+<!--            <div class="wd-clear"></div>-->
+<!--        </div>-->
+
+
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-float-left wd-padding-left-16 wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">-->
+<!--                <h3 class="wd-margin-block-0"> <span class="wd-link-color">COVID-19</span></h3>-->
+<!--                <h3 class="wd-margin-block-0">COVID-19: News and updates for Massachusetts</h3>-->
+
+<!--            </div>-->
+<!--            <div class="wd-bg-color-black">-->
+<!--                <img class="wd-float-right wd-border-radius-8 wd-image-width-100 wd-margin-top-15 wd-margin-right-16"-->
+<!--                     src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>-->
+<!--            </div>-->
+<!--            <div class="wd-clear"></div>-->
+<!--        </div>-->
+<!--        &lt;!&ndash;        content D&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="wd-content">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-float-left wd-bg-color-black">&ndash;&gt;-->
+<!--&lt;!&ndash;                COVID-19&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-bg-color-black"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                <img class="wd-float-right wd-float-right-1 wd-bg-color-black"&ndash;&gt;-->
+<!--&lt;!&ndash;                     src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                     src="https://www.mass.gov/libraries/mayflower-artifacts/assets/images/logo/stateseal-color.png"/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                     src="https://www.southwickma.org/sites/g/files/vyhlif1241/f/resize/imce/safe_image1-290x151.png"/>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        ####&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="wd-content">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-float-left wd-bg-color-black">&ndash;&gt;-->
+<!--&lt;!&ndash;                COVID-19&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-float-right wd-margin-right-16 wd-bg-color-black wd-pos-relative">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <div class="wd-pos-vertically-center ">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class=" wd-vertical-align">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <img class="wd-float-right wd-float-right-1 wd-bg-color-black"&ndash;&gt;-->
+<!--&lt;!&ndash;                         src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash; #####&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="wd-clear">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-float-left wd-col-three-forth">&ndash;&gt;-->
+<!--&lt;!&ndash;                COVID-19&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-float-left wd-col-one-forth">&ndash;&gt;-->
+<!--&lt;!&ndash;                <div class="wd-container">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="vertical-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="wd-float-right wd-float-right-1 wd-bg-color-black"&ndash;&gt;-->
+<!--&lt;!&ndash;                             src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-clear"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--    </div>-->
+
+<!--    <div class="wd-bg-color-black">-->
+<!--        <div class="wd-content">-->
+<!--            <div class="wd-margin-right-16 wd-margin-left-16">-->
+<!--                <div class="wd-float-left wd-col-three-forth">-->
+<!--                    <div class="wd-float-left wd-padding-top-16 wd-padding-bottom-16 wd-fg-color-white wd-font-size-13 wd-font wd-bold-font">-->
+<!--                        <h3 class="wd-margin-block-0"> <span class="wd-link-color">IT technology</span></h3>-->
+<!--                        <h3 class="wd-margin-block-0">Web Development: Welcome to learn new full stack technology</h3>-->
+
+<!--                    </div>-->
+<!--&lt;!&ndash;                    <div class="wd-padding-top-16">&ndash;&gt;-->
+<!--&lt;!&ndash;                        COVID-19&ndash;&gt;-->
+<!--&lt;!&ndash;                        <p class="wd-fg-color-white">COVID-19: News and updates for Massachusetts</p>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--                </div>-->
+
+<!--                <div class="wd-float-left wd-col-one-forth">-->
+
+<!--                    <div class="wd-container">-->
+<!--                        <div class="vertical-center">-->
+<!--                            <img class="wd-float-right wd-float-right-1 wd-bg-color-black"-->
+<!--                                 src="../banner.webp"/>-->
+<!--&lt;!&ndash;                                 src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>&ndash;&gt;-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="wd-clear"></div>-->
+<!--            </div>-->
+
 
 <!--        </div>-->
 <!--    </div>-->
 
+<!--&lt;!&ndash;    <div class="wd-bg-color-black">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="wd-content">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-half">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h2>Vertical Center</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>In this example, we use positioning and the transform property to vertically center an element inside a container element:</p>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="col-half">&ndash;&gt;-->
+
+<!--&lt;!&ndash;                <div class="wd-container">&ndash;&gt;-->
+<!--&lt;!&ndash;                    <div class="vertical-center">&ndash;&gt;-->
+<!--&lt;!&ndash;                        <img class="wd-float-right wd-float-right-1 wd-bg-color-black"&ndash;&gt;-->
+<!--&lt;!&ndash;                             src="https://www.mass.gov/files/styles/embedded_full_width/public/images/2022-04/microsoftteams-image_23.png?itok=g0YlSZcV"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;                </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="wd-clear"></div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
 
 
 
 
 
-<!--de-comment the following codes for more understanding-->
-<!--    <div class="content_2">-->
-<!--        <div class="content">-->
-<!--            <div class="left">-->
-<!--                <p>some content</p>-->
-<!--            </div>-->
-<!--            <div class="right">-->
-<!--                <p>some content</p>-->
-<!--            </div>-->
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
 
-<!--    </div>-->
-<!--    test-->
-<!--    <div class="content_2">-->
-<!--        <div class="content">-->
-<!--            <div class="left">-->
-<!--                <p>some content</p>-->
-<!--            </div>-->
-<!--            <div class="left">-->
-<!--                <p>some content4</p>-->
-<!--            </div>-->
-<!--            <img class="wd-float-right "-->
-<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--&lt;!&ndash;de-comment the following codes for more understanding&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="content_2">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="right">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
 
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    test&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="content_2">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content4</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img class="wd-float-right "&ndash;&gt;-->
+<!--&lt;!&ndash;                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>&ndash;&gt;-->
 
-<!--    </div>-->
-<!--    test2-->
-<!--    <div class="content_2">-->
-<!--        <div class="content_3">-->
-<!--            <div class="left">-->
-<!--                <p>some content</p>-->
-<!--            </div>-->
-<!--            <div class="left">-->
-<!--                <p>some content2</p>-->
-<!--            </div>-->
-<!--            <img class="wd-float-right "-->
-<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
 
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    test2&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="content_2">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content_3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content2</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img class="wd-float-right "&ndash;&gt;-->
+<!--&lt;!&ndash;                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>&ndash;&gt;-->
 
-<!--    </div>-->
-<!--    test3-->
-<!--    <div class="content_2">-->
-<!--        <div class="content_3">-->
-<!--            <div class="left2">-->
-<!--                <p>some content</p>-->
-<!--            </div>-->
-<!--            <div class="left">-->
-<!--                <p>some content2</p>-->
-<!--            </div>-->
-<!--            <img class="wd-float-right "-->
-<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
 
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
-<!--        <div class="content_3">-->
-<!--            <div class="left2">-->
-<!--                <p>some content</p>-->
-<!--            </div>-->
-<!--            <div class="left">-->
-<!--                <p>some content2</p>-->
-<!--            </div>-->
-<!--            <img class="wd-float-right "-->
-<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    test3&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="content_2">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content_3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left2">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content2</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img class="wd-float-right "&ndash;&gt;-->
+<!--&lt;!&ndash;                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>&ndash;&gt;-->
 
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content_3">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left2">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content2</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img class="wd-float-right "&ndash;&gt;-->
+<!--&lt;!&ndash;                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>&ndash;&gt;-->
 
-<!--    </div>-->
-<!--    testtest-->
-<!--    <div class="content_2">-->
-<!--        <div class="content_4">-->
-<!--            <div class="left">-->
-<!--                <p>some content5</p>-->
-<!--            </div>-->
-<!--            <div class="left">-->
-<!--                <p>some content5</p>-->
-<!--            </div>-->
-<!--            <img class="wd-float-right "-->
-<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
 
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
-<!--    test test test test-->
-<!--    </div>-->
-<!--    test test test-->
-<!--    <div class="content_2">-->
-<!--        <div class="content">-->
-<!--            <div class="left">-->
-<!--                <p>some content</p>-->
-<!--            </div>-->
-<!--            <div class="left">-->
-<!--                <p>some content4</p>-->
-<!--            </div>-->
-<!--            <img class="wd-float-right "-->
-<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    testtest&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="content_2">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content_4">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content5</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content5</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img class="wd-float-right "&ndash;&gt;-->
+<!--&lt;!&ndash;                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>&ndash;&gt;-->
 
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
-<!--        <div class="content">-->
-<!--            <div class="left">-->
-<!--                <p>some content5</p>-->
-<!--            </div>-->
-<!--            <div class="left">-->
-<!--                <p>some content6</p>-->
-<!--            </div>-->
-<!--            <img class="wd-float-right "-->
-<!--                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>-->
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    test test test test&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    test test test&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="content_2">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content4</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img class="wd-float-right "&ndash;&gt;-->
+<!--&lt;!&ndash;                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>&ndash;&gt;-->
 
-<!--            <div class="clear"></div>-->
-<!--        </div>-->
-<!--&lt;!&ndash;        https://stackoverflow.com/questions/20180081/css-background-color-with-floating-elements&ndash;&gt;-->
-<!--    </div>-->
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="content">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content5</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="left">&ndash;&gt;-->
+<!--&lt;!&ndash;                <p>some content6</p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;            <img class="wd-float-right "&ndash;&gt;-->
+<!--&lt;!&ndash;                 src="https://static01.nyt.com/images/2023/01/29/multimedia/29nfl-afc-champ-final-lwjk/29nfl-afc-champ-final-lwjk-threeByTwoMediumAt2X.jpg?format=pjpg&quality=75&auto=webp&disable=upscale"/>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <div class="clear"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        https://stackoverflow.com/questions/20180081/css-background-color-with-floating-elements&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
 
 
 

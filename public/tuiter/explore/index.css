@@ -37,6 +37,9 @@
 .wd-fg-color-gray {
     color: gray;
 }
+.wd-fg-color-black {
+    color: black;
+}
 .wd-rounded-corners {
     border-radius: 30px;
 }
@@ -194,7 +197,10 @@
     /*border-top: 16px;*/
 }
 .wd-header-border {
-    border-bottom: #61dafb solid medium;
+    border-bottom: #1d9bf0 solid 4px;
+}
+.wd-margin-top-2 {
+    margin-top: 2px;
 }
 
 .wd-col-one-forth {
@@ -206,6 +212,9 @@
 .wd-image-width-100 {
     width: 100px;
 }
+.wd-image-width-60 {
+    width: 60px;
+}
 .wd-border-radius-8 {
     border-radius: 8px;
 }
@@ -214,4 +223,21 @@
 }
 .wd-margin-top-15 {
     margin-top: 15px;
+}
+.service-list {
+    list-style-type: none;
+    margin-left:0px;
+    padding-left:0px;
+    display: inline-block;
+}
+
+.service-list img
+{
+    float:right;
+}
+
+.service-list p,h3 {
+    text-align: left;
+    display:inline-block;
+    padding: 0;
 }
