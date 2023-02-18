@@ -24,7 +24,7 @@ function WhoToFollowListItem(who) {
                 <div class="col-lg-4 col-xl-3">
                     <div class="wd-container">
                         <div class="vertical-center">
-                            <a class="btn wd-border-radius-20 wd-float-right" style="background-color: #4f9ed1"><span class="fw-bold" style="color: white">Follow</span></a>
+                            <a class="btn wd-border-radius-20 wd-float-right" style="background-color: #4f9ed1"><span  style="color: white">Follow</span></a>
                         </div>
                     </div>
                     
