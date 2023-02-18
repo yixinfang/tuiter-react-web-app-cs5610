@@ -255,3 +255,15 @@
     border-bottom: 2px solid yellow !important;
     border-radius: 0px !important;
 }
+
+.custom-btn-lightblue {
+
+}
+
+.wd-post-up-radius {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.wd-post-all-radius {
+    border-radius: 8px;
+}
