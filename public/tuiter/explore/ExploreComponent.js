@@ -37,9 +37,9 @@ const ExploreComponent = (select='For you') => {
         </ul>
 <!--        image with overlaid-->
         <div class="wd-banner mt-2">
-            <img src="https://techcrunch.com/wp-content/uploads/2019/09/Starship-Mk1-Day.jpg" class="img-fluid" alt="Responsive image"/>
+            <img src="../../images/Starship-Mk1-Day.webp" class="img-fluid" alt="Responsive image"/>
             <div class="wd-banner-content">
-                <h2 class="text-white fw-bold">
+                <h2 class="fw-bold" style="color: #222222;">
                     SpaceX's Starship
                 </h2>
             </div>

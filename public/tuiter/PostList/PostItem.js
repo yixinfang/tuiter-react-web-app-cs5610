@@ -10,7 +10,7 @@ function PostItem(fullPost) {
                 </div>
                 <div class="col-9">
                     <div style="float: left;">
-                        <span class="fw-bold">${fullPost.userName}</span><i class="fas fa-check-circle"></i><span>@${fullPost.handle}・${fullPost.time}</span>
+                        <span class="fw-bold">${fullPost.userName}</span>&nbsp<i class="fas fa-check-circle"></i><span>&nbsp@${fullPost.handle}・${fullPost.time}</span>
                         </br>
                         <span>${fullPost.contentPost}</span>
                     </div>
@@ -33,16 +33,16 @@ function PostItem(fullPost) {
                             </div>
                             <div class="list-group-item ${fullPost.sub ? '' : 'd-none'}"> 
                                 <span class="fw-bold">${fullPost.subTitle}</span></br>
-                                <span>${fullPost.subContent}</span></br>
-                                <span><i class="fas fa-link"></i>${fullPost.outlink}</span>
+                                <span style="color: gray">${fullPost.subContent}</span></br>
+                                <span style="color: gray"><i class="fas fa-link"></i>${fullPost.outlink}</span>
                   
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col"><i class="far fa-comment"></i><span>${fullPost.commentNumber}</span></div>
-                        <div class="col"><i class="fas fa-retweet"></i><span>${fullPost.retweetNumber}</span></div>
-                        <div class="col"><i class="far fa-heart"></i><span>${fullPost.likeNumber}</span></div>
+                    <div class="row pt-3 pb-1"  style="color: gray">
+                        <div class="col"><i class="far fa-comment"></i><span>&nbsp&nbsp&nbsp&nbsp${fullPost.commentNumber}</span></div>
+                        <div class="col"><i class="fas fa-retweet"></i><span>&nbsp&nbsp&nbsp&nbsp${fullPost.retweetNumber}</span></div>
+                        <div class="col"><i class="far fa-heart"></i><span>&nbsp&nbsp&nbsp&nbsp${fullPost.likeNumber}</span></div>
                         <div class="d-none d-sm-block col"><i class="fas fa-upload"></i></div>
                     </div>
                 </div>
