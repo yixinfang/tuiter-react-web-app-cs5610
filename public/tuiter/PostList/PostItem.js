@@ -40,10 +40,21 @@ function PostItem(fullPost) {
                         </div>
                     </div>
                     <div class="row pt-3 pb-1"  style="color: gray">
-                        <div class="col"><i class="far fa-comment"></i><span>&nbsp&nbsp&nbsp&nbsp${fullPost.commentNumber}</span></div>
-                        <div class="col"><i class="fas fa-retweet"></i><span>&nbsp&nbsp&nbsp&nbsp${fullPost.retweetNumber}</span></div>
-                        <div class="col"><i class="far fa-heart"></i><span>&nbsp&nbsp&nbsp&nbsp${fullPost.likeNumber}</span></div>
-                        <div class="d-none d-sm-block col"><i class="fas fa-upload"></i></div>
+                        <div class="d-sm-none col"><a style="text-decoration: none; color: gray" href="${fullPost.commentHref}"><i class="far fa-comment"></i></a></div>
+                        <div class="d-none d-sm-block d-lg-none col"><a style="text-decoration: none; color: gray" href="${fullPost.commentHref}"><i class="far fa-comment"></i>&nbsp<span>${fullPost.commentNumber}</span></a></div>
+                        <div class="d-none d-lg-block col"><a style="text-decoration: none; color: gray" href="${fullPost.commentHref}"><i class="far fa-comment"></i>&nbsp&nbsp&nbsp&nbsp<span>${fullPost.commentNumber}</span></a></div>
+
+                        <div class="d-sm-none col"><a style="text-decoration: none; color: gray" href="${fullPost.retweetHref}"><i class="fas fa-retweet"></i></a></div>
+                        <div class="d-none d-sm-block d-lg-none col"><a style="text-decoration: none; color: gray" href="${fullPost.retweetHref}"><i class="fas fa-retweet"></i>&nbsp<span>${fullPost.retweetNumber}</span></a></div>
+                        <div class="d-none d-lg-block col"><a style="text-decoration: none; color: gray" href="${fullPost.retweetHref}"><i class="fas fa-retweet"></i>&nbsp&nbsp&nbsp&nbsp<span>${fullPost.retweetNumber}</span></a></div>
+
+                        <div class="d-sm-none col"><a style="text-decoration: none; color: gray" href="${fullPost.likeHref}"><i class="far fa-heart"></i></a></div>
+                        <div class="d-none d-sm-block d-lg-none col"><a style="text-decoration: none; color: gray" href="${fullPost.likeHref}"><i class="far fa-heart"></i>&nbsp<span>${fullPost.likeNumber}</span></a></div>
+                        <div class="d-none d-lg-block col"><a style="text-decoration: none; color: gray" href="${fullPost.likeHref}"><i class="far fa-heart"></i>&nbsp&nbsp&nbsp&nbsp<span>${fullPost.likeNumber}</span></a></div>
+
+                        
+                        
+                        <div class="col"><a style="text-decoration: none; color: gray" href="${fullPost.uploadHref}"><i class="fas fa-upload"></i></a></div>
                     </div>
                 </div>
             </div>

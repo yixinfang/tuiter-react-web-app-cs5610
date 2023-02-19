@@ -11,10 +11,12 @@ export default [
         outlink: 'netflix.com',
         sub: true,
         commentNumber: '4.2K',
+        commentHref: '#',
         retweetNumber: '3.5K',
+        retweetHref: '#',
         likeNumber: '37.5K',
-
-
+        likeHref: '#',
+        uploadHref: '#',
     },
     {
         avatarIcon: '../../images/newyorkpost.png',
@@ -28,8 +30,12 @@ export default [
         outlink: '',
         sub: false,
         commentNumber: '965',
+        commentHref: '#',
         retweetNumber: '2.4K',
+        retweetHref: '#',
         likeNumber: '4K',
+        likeHref: '#',
+        uploadHref: '#',
     },
 
 ];
