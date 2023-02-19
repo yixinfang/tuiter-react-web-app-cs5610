@@ -25,7 +25,7 @@ const ExploreComponent = (select='For you') => {
         <ul class="nav mb-2 nav-tabs">
                 ${
                     sections.map(section =>
-                        `<li class="nav-item">
+                        `<li class="nav-item ${section.label === 'Entertainment' ? 'd-none d-md-block' : ''}">
                                         <a class="nav-link ${section.label === select ? 'active' : ''}" 
                                            href="${section.href}">
                                            ${section.label}
