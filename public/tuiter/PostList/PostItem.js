@@ -18,7 +18,7 @@ function PostItem(fullPost) {
                 <div class="col-1">
                     <div style="float: right;"><a href="#" style="color: gray;"><i class="fas fa-ellipsis-h"></i></a></div>
 </div>
-                </div>
+            </div>
             
             <div class="row">
                 <div class="col-2"></div>

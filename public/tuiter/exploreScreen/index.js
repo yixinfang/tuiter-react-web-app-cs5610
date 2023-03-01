@@ -21,7 +21,7 @@
 // `)
 import NavigationSidebar from "../NavigationSidebar/index.js";
 import WhoToFollowList from "../WhoToFollowList/index.js";
-import ExploreComponent from "../explore/ExploreComponent.js";
+import ExploreComponent from ".//ExploreComponent.js";
 function exploreComponent() {
     $('#wd-explore').append(`
 <!--       <h2>Explore</h2>-->
