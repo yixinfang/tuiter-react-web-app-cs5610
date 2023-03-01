@@ -6,7 +6,7 @@ const PostItem = ({fullPost}) => {
             <div className="row">
                 <div className="col-2">
                     <div className="float-start">
-                        <img className="img-fluid" src={`/images/${fullPost.avatarIcon}`}/>
+                        <img className="img-fluid" alt="show" src={`/images/${fullPost.avatarIcon}`}/>
                     </div>
                 </div>
                 <div className="col-9">
