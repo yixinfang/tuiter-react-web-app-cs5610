@@ -38,7 +38,7 @@ const PostItem = ({fullPost}) => {
                         </div>
                     </div>
                     <div className="row pt-3 pb-1" style={{color: "gray"}}>
-                        <div className="d-sm-none col"><a href="https://www.northeastern.edu/" style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i></a></div>
+                        <div className="d-sm-none col"><a href={"/"} style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i></a></div>
                         <div className="d-none d-sm-block d-lg-none col"><a href="https://www.northeastern.edu/" style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i> <span>{fullPost.commentNumber}</span></a></div>
                         <div className="d-none d-lg-block col"><a href="https://www.northeastern.edu/" style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i>    <span>{fullPost.commentNumber}</span></a></div>
 
