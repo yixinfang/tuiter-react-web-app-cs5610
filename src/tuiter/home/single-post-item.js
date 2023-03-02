@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 const PostItem = ({fullPost}) => {
     return(
@@ -18,7 +19,7 @@ const PostItem = ({fullPost}) => {
 
                 </div>
                 <div className="col-1">
-                    <div className="float-end"><a href="/#"><i className="bi bi-three-dots" style={{color:"gray"}}></i></a></div>
+                    <div className="float-end"><Link to="/#"><i className="bi bi-three-dots" style={{color:"gray"}}></i></Link></div>
                 </div>
 
             </div>
