@@ -18,7 +18,7 @@ const PostItem = ({fullPost}) => {
 
                 </div>
                 <div className="col-1">
-                    <div className="float-end"><a href="#"><i className="bi bi-three-dots" style={{color:"gray"}}></i></a></div>
+                    <div className="float-end"><a><i className="bi bi-three-dots" style={{color:"gray"}}></i></a></div>
                 </div>
 
             </div>
@@ -28,7 +28,7 @@ const PostItem = ({fullPost}) => {
                     <div className="float-end">
                         <div className="list-group">
                             <div className="list-group-item pt-0 pb-0 ps-0 pe-0">
-                                <img className="img-fluid" style={{"border-radius":8}} src={`/images/${fullPost.imagePost}`}/>
+                                <img className="img-fluid" style={{"border-radius":8}} alt="show"src={`/images/${fullPost.imagePost}`}/>
                             </div>
                             <div className={`list-group-item ${fullPost.sub ? '' : 'd-none'}`} >
                                 <div className="fw-bold">{fullPost.subTitle}</div>
@@ -38,7 +38,7 @@ const PostItem = ({fullPost}) => {
                         </div>
                     </div>
                     <div className="row pt-3 pb-1" style={{color: "gray"}}>
-                        <div className="d-sm-none col"><a href="#" style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i></a></div>
+                        <div className="d-sm-none col"><a href="/#" style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i></a></div>
                         <div className="d-none d-sm-block d-lg-none col"><a href="#" style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i> <span>{fullPost.commentNumber}</span></a></div>
                         <div className="d-none d-lg-block col"><a href="#" style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i>    <span>{fullPost.commentNumber}</span></a></div>
 
