@@ -41,10 +41,15 @@ const NavigationSidebar = () => {
                     ${active === 'profile'?'active':''}`} href={"/"}>
                 Profile
             </a>
-            <a className={`list-group-item
-                    ${active === 'more'?'active':''}`} href={"/"}>
-                More
-            </a>
+            {/*<a className={`list-group-item*/}
+            {/*        ${active === 'more'?'active':''}`} href={"/"}>*/}
+            {/*    More*/}
+            {/*</a>*/}
+            <Link to={"/"} className={`list-group-item ${active === "More".toLowerCase() ? "active" : ""}`} >
+
+                <i className="bi bi-filter-circle-fill wd-icon-width  mt-1"></i> More
+
+            </Link>
         </div>
 
 
