@@ -19,7 +19,7 @@ const PostItem = ({fullPost}) => {
 
                 </div>
                 <div className="col-1">
-                    <div className="float-end"><Link to="/#"><i className="bi bi-three-dots" style={{color:"gray"}}></i></Link></div>
+                    <div className="float-end"><a role="button"><i className="bi bi-three-dots" style={{color:"gray"}}></i></a></div>
                 </div>
 
             </div>
