@@ -21,14 +21,15 @@ const NavigationSidebar = () => {
                 Labs
             </Link>
 
-            <a className={`list-group-item
-                    ${active === 'notifications'?'active':''}`} href={"/"}>
-                Notifications
-            </a>
-            <a className={`list-group-item
-                    ${active === 'messages'?'active':''}`} href={"/"}>
-                Messages
-            </a>
+
+            <Link to={"/"} className={`list-group-item ${active === "Notifications".toLowerCase() ? "active" : ""}`} >
+                <i className="bi bi-bell-fill wd-icon-width  mt-1"></i> Notifications
+            </Link>
+
+            <Link to={"/"} className={`list-group-item ${active === "Messages".toLowerCase() ? "active" : ""}`} >
+                <i className="bi bi-envelope-fill wd-icon-width  mt-1"></i> Messages
+            </Link>
+
             <a className={`list-group-item
                     ${active === 'bookmarks'?'active':''}`} href={"/"}>
                 Bookmarks
