@@ -16,6 +16,12 @@
     left: 25px;
 }
 
+.wd-nudge-down {
+    bottom: -80px;
+    left: 20px;
+}
+
+
 .wd-bottom-2 {
     bottom: 2px;
 }

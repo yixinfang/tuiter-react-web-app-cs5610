@@ -5,7 +5,10 @@ import {useLocation} from "react-router";
 const NavigationSidebar = () => {
     const {pathname} = useLocation();
     const paths = pathname.split('/')
-    const active = paths[2];
+    const cnt = paths.length;
+    const active = paths[cnt-1];
+    // const active = paths[2];
+    // console.log(cnt, active)
 
     return (
         <div className="list-group">
@@ -15,7 +18,7 @@ const NavigationSidebar = () => {
                 <div className={"d-xl-none"}><i className="bi bi-twitter wd-icon-width  mt-1"></i></div>
             </Link>
 
-            <Link to="/tuiter/home" className={`list-group-item ${active === 'home'?'active':''}`}>
+            <Link to="/tuiter/home" className={`list-group-item ${(active === 'home') || (active === 'tuiter') ?'active':''}`}>
                 <div className="d-none d-xl-block"><i className="bi bi-house-fill wd-icon-width  mt-1"></i> Home</div>
                 <div className={"d-xl-none"}><i className="bi bi-house-fill wd-icon-width  mt-1"></i></div>
             </Link>
@@ -50,7 +53,7 @@ const NavigationSidebar = () => {
                 <div className={"d-xl-none"}><i className="bi bi-list-ul wd-icon-width  mt-1"></i></div>
             </Link>
 
-            <Link to={"/"} className={`list-group-item ${active === "Profile".toLowerCase() ? "active" : ""}`} >
+            <Link to={"/tuiter/profile"} className={`list-group-item ${(active === "Profile".toLowerCase()) || (active === "edit-profile".toLowerCase()) ? "active" : ""}`} >
                 <div className="d-none d-xl-block"><i className="bi bi-person-fill wd-icon-width  mt-1"></i> Profile</div>
                 <div className={"d-xl-none"}><i className="bi bi-person-fill wd-icon-width  mt-1"></i></div>
             </Link>
