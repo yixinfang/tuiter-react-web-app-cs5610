@@ -6,8 +6,16 @@ import {editProfile} from "./profile-reducer";
 const EditProfileComponent = () => {
     // this allows you to copy
     // the State from the global state into our local State.
-    const currProfile = useSelector((state) => state.currProfile)
+    const currProfile = useSelector(state => state.currProfile.currProfile)
     const [newProfile, setProfile] = useState(currProfile);
+    // const [newFirstName, setFirstName] = useState('')
+    // const editFirstName = (e) => {
+    //     const firstNameEdited = e.target.value;
+    //     const newFirstName = {
+    //         firstName: firstNameEdited
+    //     };
+    //     setFirstName(newFirstName);
+    // }
 
     // console.log(currProfile)
     // a function that allows us to send over data to the reducer. It allows us to invoke this function
@@ -16,12 +24,17 @@ const EditProfileComponent = () => {
     const handleSaveButton = () => {
         // alert("save button clicked");
         dispatch(editProfile(newProfile))
-        console.log(currProfile.firstName, newProfile.firstName)
+
+        // dispatch(editProfile({
+        //     firstName: newFirstName,
+        // }))
+        console.log(currProfile, newProfile)
         // dispatch(editProfile({
         //     bio: bio,
         //     name: name,
         // }))
     };
+    console.log(currProfile, newProfile)
     return(
         // <h3>{newProfile.bio}</h3>
         <>
@@ -49,16 +62,16 @@ const EditProfileComponent = () => {
                     <div>first name</div>
                     <input
                         onChange={(e) =>
+                            // editFirstName(e.target.value)
                             setProfile({
                                 ...newProfile,
                                 firstName: e.target.value,
                             })
                         }
-                        value={`${newProfile.firstName}`}
+                        placeholder={`${newProfile.firstName}`}
                         style={{"text-decoration": "none","border-width": 0}}
                     />
-                    {newProfile.firstName}
-                    {currProfile.firstName}
+                    {newProfile.firstName} {currProfile.firstName}
                 </li>
                 <li className={"list-group-item"}>
                     <div>last name</div>

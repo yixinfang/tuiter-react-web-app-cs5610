@@ -4,7 +4,7 @@ import EditProfile from "./EditProfile";
 import {useSelector} from "react-redux";
 // const ProfileComponent = ({profile}) => {
 function ProfileComponent() {
-    const currProfile = useSelector((state) => state.currProfile)
+    const currProfile = useSelector(state => state.currProfile.currProfile)
     console.log(currProfile.firstName)
     return(
         <>
