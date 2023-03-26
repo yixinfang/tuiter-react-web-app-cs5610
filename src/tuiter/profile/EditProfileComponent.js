@@ -170,7 +170,8 @@ const EditProfileComponent = () => {
                     />
                 </div>
                 <div className={"form-group mb-3"} style={{"border": "1px solid gray", color: "gray"}}>
-                    <label className={"ps-3"}>Birth data </label> <button>Edit</button>
+                    {/*<label className={"ps-3"}>Birth data </label> <button>Edit</button>*/}
+                    <label className={"ps-3"}>Birth data </label>
                     <br />
                     <input
                         onChange={(e) =>
