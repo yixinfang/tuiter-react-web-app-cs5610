@@ -8,6 +8,7 @@ const EditProfileComponent = () => {
     // the State from the global state into our local State.
     const currProfile = useSelector(state => state.currProfile.currProfile)
     const [newProfile, setProfile] = useState(currProfile);
+
     // const [newFirstName, setFirstName] = useState('')
     // const editFirstName = (e) => {
     //     const firstNameEdited = e.target.value;
@@ -67,71 +68,54 @@ const EditProfileComponent = () => {
                      src={`/images/${newProfile.profilePicture}`}
                 />
             </div>
-            <div className={"list-group"} style={{"marginTop": 72}}>
-                <li className={"list-group-item"}>
-                    <label>Name</label>
-                    <br/>
-                    <input
-                        onChange={(e) =>
-                            // editFirstName(e.target.value)
-                            setProfile({
-                                ...newProfile,
-                                firstName: e.target.value,
-                            })
-                        }
-                        className={'w-25'}
-                        value={`${newProfile.firstName}`}
-                        placeholder="first name"
-                        style={{"text-decoration": "none","border-width": 0}}
-                    />
-                    <input
-                        onChange={(e) =>
-                            // editFirstName(e.target.value)
-                            setProfile({
-                                ...newProfile,
-                                lastName: e.target.value,
-                            })
-                        }
-                        className={'w-25'}
-                        value={`${newProfile.lastName}`}
-                        placeholder="last name"
-                        style={{"text-decoration": "none","border-width": 0}}
-                    />
 
-                </li>
-                {/*<li className={"list-group-item"}>*/}
-                {/*    <div>first name</div>*/}
-                {/*    <input*/}
-                {/*        onChange={(e) =>*/}
-                {/*            // editFirstName(e.target.value)*/}
-                {/*            setProfile({*/}
-                {/*                ...newProfile,*/}
-                {/*                firstName: e.target.value,*/}
-                {/*            })*/}
-                {/*        }*/}
-                {/*        placeholder={`${newProfile.firstName}`}*/}
-                {/*        style={{"text-decoration": "none","border-width": 0}}*/}
-                {/*    />*/}
-                {/*    {newProfile.firstName} {currProfile.firstName}*/}
-                {/*</li>*/}
-                {/*<li className={"list-group-item"}>*/}
-                {/*    <div>last name</div>*/}
-                {/*    <input*/}
-                {/*        onChange={(e) =>*/}
-                {/*            setProfile({*/}
-                {/*                ...newProfile,*/}
-                {/*                lastName: e.target.value,*/}
-                {/*            })*/}
-                {/*        }*/}
-                {/*        value={`${newProfile.lastName}`}*/}
-                {/*        style={{"text-decoration": "none","border-width": 0}}*/}
-                {/*    />*/}
-                {/*    {newProfile.lastName}*/}
-                {/*</li>*/}
-                <li className={"list-group-item"}>
-                    <label>Bio</label>
+            <form style={{"marginTop": 96}}>
+                <div className={"form-group mb-3"} style={{"border": "1px solid gray", color: "gray"}}>
+                    <label className={'ps-3'}>Name</label>
                     <br/>
-                    <input
+                    <div className={"row"}>
+                        <div className={"col-3 ps-3"}>
+                            <input
+                                onChange={(e) =>
+                                    // editFirstName(e.target.value)
+                                    setProfile({
+                                        ...newProfile,
+                                        firstName: e.target.value,
+                                    })
+                                }
+                                className={' form-control'}
+                                value={`${newProfile.firstName}`}
+                                placeholder="first name"
+                                style={{"text-decoration": "none","border-width": 0}}
+                            />
+                        </div>
+                        <div className={"col-3"}>
+                            <input
+                                onChange={(e) =>
+                                    // editFirstName(e.target.value)
+                                    setProfile({
+                                        ...newProfile,
+                                        lastName: e.target.value,
+                                    })
+                                }
+                                className={' form-control'}
+                                value={`${newProfile.lastName}`}
+                                placeholder="last name"
+                                style={{"text-decoration": "none","border-width": 0}}
+                            />
+                        </div>
+                        <div className={"col-6"}>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div className={"form-group mb-3"} style={{"border": "1px solid gray", color: "gray"}}>
+                    <label className={'ps-3'}>Bio</label>
+                    <br/>
+                    <textarea
                         onChange={(e) =>
                             setProfile({
                                 ...newProfile,
@@ -139,13 +123,13 @@ const EditProfileComponent = () => {
                             })
                         }
                         value={newProfile.bio}
-                        style={{"text-decoration": "none","border-width": 0, "height":40}}
-                        className="w-100"
+
+                        style={{"text-decoration": "none","border-width": 0, "rows": 10}}
+                        className="w-100 form-control ps-3"
                     />
-                    {/*{newProfile.bio}*/}
-                </li>
-                <li className={"list-group-item"}>
-                    <div>Location</div>
+                </div>
+                <div className={"form-group mb-3"} style={{"border": "1px solid gray", color: "gray"}}>
+                    <div className={'ps-3'}>Location</div>
                     <input
                         onChange={(e) =>
                             setProfile({
@@ -153,12 +137,26 @@ const EditProfileComponent = () => {
                                 location: e.target.value,
                             })
                         }
+                        className={"form-control ps-3"}
                         value = {newProfile.location}
                         style={{"text-decoration": "none","border-width": 0}}
                     />
-                    {newProfile.location}
-                </li>
-                <li className={"list-group-item"}>
+                </div>
+                <div className={"form-group mb-3"} style={{"border": "1px solid gray", color: "gray"}}>
+                    <div className={'ps-3'}>handle</div>
+                    <input
+                        onChange={(e) =>
+                            setProfile({
+                                ...newProfile,
+                                handle: e.target.value,
+                            })
+                        }
+                        className={"form-control"}
+                        value = {newProfile.handle}
+                        style={{"text-decoration": "none","border-width": 0}}
+                    />
+                </div>
+                <div className={"form-group mb-3"} style={{"border": "1px solid gray", color: "gray"}}>
                     <input
                         onChange={(e) =>
                             setProfile({
@@ -167,34 +165,48 @@ const EditProfileComponent = () => {
                             })
                         }
                         style={{"text-decoration": "none","border-width": 0}}
-                        className="w-100"
+                        className="w-100 form-control ps-3"
                         placeholder='website'
                     />
-                </li>
-                <li className={"list-group-item"}>
-                    <label>Birth data <span>Edit</span></label>
+                </div>
+                <div className={"form-group mb-3"} style={{"border": "1px solid gray", color: "gray"}}>
+                    <label className={"ps-3"}>Birth data </label> <button>Edit</button>
                     <br />
+                    <input
+                        onChange={(e) =>
+                            setProfile({
+                                ...newProfile,
+                                dateOfBirth: e.target.value,
+                            })
+                        }
+                        value={newProfile.dateOfBirth}
+                        style={{"text-decoration": "none","border-width": 0}}
+                        className="w-100 ps-3"
+                    />
                     {/*<input*/}
                     {/*    style={{"text-decoration": "none","border-width": 0}}*/}
                     {/*    value={newProfile.dateOfBirth}*/}
                     {/*/>*/}
-                    <input
-                        style={{"text-decoration": "none","border-width": 0, "width": 30}}
-                        // className={"w-25"}
-                        value={dateOfBirth_arr[0]}
-                    />
-                    <input
-                        style={{"text-decoration": "none","border-width": 0, "width": 30}}
-                        value={dateOfBirth_arr[1]}
-                    />
-                    <input
-                        style={{"text-decoration": "none","border-width": 0, "width": 60}}
-                        value={dateOfBirth_arr[2]}
-                    />
-                </li>
+                    {/*******/}
+                    {/*<input*/}
+                    {/*    style={{"text-decoration": "none","border-width": 0, "width": 30}}*/}
+                    {/*    placeholder={"month"}*/}
+                    {/*    // className={"w-25"}*/}
+                    {/*    value={dateOfBirth_arr[0]}*/}
+                    {/*/>*/}
+                    {/*<input*/}
+                    {/*    style={{"text-decoration": "none","border-width": 0, "width": 30}}*/}
+                    {/*    value={dateOfBirth_arr[1]}*/}
+                    {/*/>*/}
+                    {/*<input*/}
+                    {/*    style={{"text-decoration": "none","border-width": 0, "width": 60}}*/}
+                    {/*    value={dateOfBirth_arr[2]}*/}
+                    {/*/>*/}
+                </div>
+            </form>
 
 
-            </div>
+
         </>
 
 
