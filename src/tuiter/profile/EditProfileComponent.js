@@ -48,11 +48,11 @@ const EditProfileComponent = () => {
                </div>
                <div className={"col-11"}>
                    <h3>
-                       <button
+                       <Link to={'/tuiter/profile'}><button
                            onClick={handleSaveButton}
                            className={"btn btn-info float-end"}>
                            Save
-                       </button>
+                       </button></Link>
                        Edit Profile
                    </h3>
                </div>
