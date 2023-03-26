@@ -35,6 +35,9 @@ const EditProfileComponent = () => {
         // }))
     };
     console.log(currProfile, newProfile)
+    const dateOfBirth = currProfile.dateOfBirth
+    const dateOfBirth_arr = dateOfBirth.split('/')
+
     return(
         // <h3>{newProfile.bio}</h3>
         <>
@@ -64,7 +67,7 @@ const EditProfileComponent = () => {
                      src={`/images/${newProfile.profilePicture}`}
                 />
             </div>
-            <div className={"list-group"} style={{"margin-top": 72}}>
+            <div className={"list-group"} style={{"marginTop": 72}}>
                 <li className={"list-group-item"}>
                     <label>Name</label>
                     <br/>
@@ -136,7 +139,7 @@ const EditProfileComponent = () => {
                             })
                         }
                         value={newProfile.bio}
-                        style={{"text-decoration": "none","border-width": 0}}
+                        style={{"text-decoration": "none","border-width": 0, "height":40}}
                         className="w-100"
                     />
                     {/*{newProfile.bio}*/}
@@ -171,9 +174,22 @@ const EditProfileComponent = () => {
                 <li className={"list-group-item"}>
                     <label>Birth data <span>Edit</span></label>
                     <br />
+                    {/*<input*/}
+                    {/*    style={{"text-decoration": "none","border-width": 0}}*/}
+                    {/*    value={newProfile.dateOfBirth}*/}
+                    {/*/>*/}
                     <input
-                        style={{"text-decoration": "none","border-width": 0}}
-                        value={newProfile.dateOfBirth}
+                        style={{"text-decoration": "none","border-width": 0, "width": 30}}
+                        // className={"w-25"}
+                        value={dateOfBirth_arr[0]}
+                    />
+                    <input
+                        style={{"text-decoration": "none","border-width": 0, "width": 30}}
+                        value={dateOfBirth_arr[1]}
+                    />
+                    <input
+                        style={{"text-decoration": "none","border-width": 0, "width": 60}}
+                        value={dateOfBirth_arr[2]}
                     />
                 </li>
 
