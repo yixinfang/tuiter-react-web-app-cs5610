@@ -36,8 +36,8 @@ const EditProfileComponent = () => {
         // }))
     };
     console.log(currProfile, newProfile)
-    const dateOfBirth = currProfile.dateOfBirth
-    const dateOfBirth_arr = dateOfBirth.split('/')
+    // const dateOfBirth = currProfile.dateOfBirth
+    // const dateOfBirth_arr = dateOfBirth.split('/')
 
     return(
         // <h3>{newProfile.bio}</h3>
