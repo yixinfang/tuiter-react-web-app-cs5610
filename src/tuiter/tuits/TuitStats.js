@@ -8,7 +8,7 @@ const TuitStats = ({tuit}) => {
         dispatch(likeTuit(tuit_id))
     }
     const heartIcon = tuit.liked ? 'bi-heart-fill': 'bi-heart';
-    const heartColor = tuit.liked ? "red" : "gray";
+    // const heartColor = tuit.liked ? "red" : "gray";
     return(
         <div className={"row pt-3 pb-1"} style={{color: "gray"}}>
             <div className="d-sm-none col"><a href={"/"} style={{"text-decoration": "none", color: "gray"}}><i className="bi bi-chat"></i></a></div>
