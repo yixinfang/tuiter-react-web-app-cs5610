@@ -20,7 +20,7 @@ const TuitItem = ({tuit}) => {
                         <i className="bi bi-x-lg float-end"
                            onClick={() => deleteTuitHandler(tuit._id)}></i>
                     </div>
-                    <div><span className={"fw-bold"}>{tuit.userName}</span><span><i className="bi bi-patch-check-fill" style={{color: "blue"}}></i> </span>  <span style={{color: "gray"}}>{tuit.handle}・{tuit.time}</span></div>
+                    <div><span className={"fw-bold"}>{tuit.username}</span><span><i className="bi bi-patch-check-fill" style={{color: "blue"}}></i> </span>  <span style={{color: "gray"}}>{tuit.handle}・{tuit.time}</span></div>
                     <div>{tuit.tuit}</div>
                     <TuitStats tuit={tuit}/>
 
