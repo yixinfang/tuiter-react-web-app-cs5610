@@ -42,4 +42,5 @@ const WhatsHappening = () => {
         </div>
     );
 }
+
 export default WhatsHappening;
